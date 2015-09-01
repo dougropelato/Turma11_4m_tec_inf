@@ -122,6 +122,7 @@ public final class JfMapa extends javax.swing.JFrame {
 
     public void insereAtor(String ator, int posx, int posy) {
         this.getContentPane().add(criaAtor(String.valueOf(ator), posx, posy), 0);
+        // O zero deixa o ator em cima da grade
     }
 
     private void insereGrade(int tamx, int tamy) {
