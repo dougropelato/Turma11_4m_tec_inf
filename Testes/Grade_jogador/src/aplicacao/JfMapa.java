@@ -72,7 +72,7 @@ public final class JfMapa extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JfMapa().setVisible(true);
+                new JfMapa().setVisible(true);   
             }
         });
     }
