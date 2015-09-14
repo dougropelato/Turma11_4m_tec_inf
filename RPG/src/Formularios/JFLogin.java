@@ -6,17 +6,25 @@
 
 package formularios;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Micro10
  */
 public class JFLogin extends javax.swing.JFrame {
-
-    /**
-     * Creates new form JFLogin
-     */
+    
+ public void centralizarComponente() {
+        Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension dw = getSize();
+        setLocation((ds.width - dw.width) / 2,
+                (ds.height - dw.height) / 2);
+        
+    }
     public JFLogin() {
         initComponents();
+        centralizarComponente();
     }
 
     /**
@@ -43,10 +51,20 @@ public class JFLogin extends javax.swing.JFrame {
         jLabel2.setText("SENHA:");
 
         jbOkLogin.setText("OK");
+        jbOkLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbOkLoginActionPerformed(evt);
+            }
+        });
 
         jbSairLogin.setText("Sair");
 
         jButton1.setText("Novo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,6 +113,18 @@ public class JFLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbOkLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbOkLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbOkLoginActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+         Formularios.JFNovoUsuario JFN = new Formularios.JFNovoUsuario();
+         JFN.setVisible(true);
+           
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
