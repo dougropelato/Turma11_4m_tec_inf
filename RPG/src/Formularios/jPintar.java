@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javafx.scene.paint.Color.color;
-import static javafx.scene.paint.Color.color;
 import javax.swing.JPanel;
 import tabelas.Caminhos;
 import tabelas.Posicoes;
