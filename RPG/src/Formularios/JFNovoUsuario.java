@@ -5,14 +5,19 @@
  */
 package Formularios;
 
+import dao.GenericDAO;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Jailton
  */
 public class JFNovoUsuario extends javax.swing.JFrame {
+     private final GenericDAO gg;
 
      public void centralizarComponente() {
         Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
@@ -21,9 +26,11 @@ public class JFNovoUsuario extends javax.swing.JFrame {
                 (ds.height - dw.height) / 2);
         
     }
-    public JFNovoUsuario() {
+    public JFNovoUsuario() throws SQLException {
+        
         initComponents();
         centralizarComponente();
+        this.gg = new GenericDAO();
     }
 
     /**
@@ -49,7 +56,7 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         JBCadastrar = new javax.swing.JButton();
         JBCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Nome:");
 
@@ -65,8 +72,18 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         jLabel6.setText("Cadastro de Novos Usuários");
 
         JBCadastrar.setText("Cadastrar");
+        JBCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBCadastrarActionPerformed(evt);
+            }
+        });
 
         JBCancelar.setText("Cancelar");
+        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,9 +117,7 @@ public class JFNovoUsuario extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4)))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(JTFConfirmaSenha)
@@ -149,6 +164,35 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBCancelarActionPerformed
+
+    private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
+        
+        Tabelas.NovoUsuario NoUs = new Tabelas.NovoUsuario();
+        
+        NoUs.setNome_NovoUsuario(JTFNome.getText());
+        NoUs.setApelido_NovoUsuario(JTFApelido.getText());
+        NoUs.setEmail_NovoUsuario(JTFEmail.getText());
+        NoUs.setSenha_NovoUsuario(JTFSenha.getText());
+        NoUs.setConfirmaSenha_NovoUsuario(JTFConfirmaSenha.getText());
+        
+         try {
+             gg.adicionar(NoUs);
+         } catch (ClassNotFoundException ex) {
+             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (SQLException ex) {
+             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (IllegalArgumentException ex) {
+             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (IllegalAccessException ex) {
+             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+      
+    }//GEN-LAST:event_JBCadastrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -179,7 +223,11 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFNovoUsuario().setVisible(true);
+                try {
+                    new JFNovoUsuario().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
