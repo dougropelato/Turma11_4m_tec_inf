@@ -45,7 +45,7 @@ public class JFPersonagem extends javax.swing.JFrame {
     ArrayList listClasse = new ArrayList();
 
     /**
-     * Creates new form JFPersonagem
+     * Creates new form JFPersonagem n
      */
     public JFPersonagem() {
         initComponents();
