@@ -41,6 +41,7 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
         jbSelecionar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +65,8 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
+        jLabel3.setText("jLabel3");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,6 +85,8 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
                 .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel2)
                 .addGap(122, 122, 122))
         );
@@ -91,7 +96,9 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
@@ -106,14 +113,56 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    public class variaveis {
+        int pontosDificuldade;
+        
+        public variaveis() {
+    pontosDificuldade = 0;
+}
+    }
+    
     private void jbSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSelecionarActionPerformed
-        jComboBox1.getSelectedItem();
-        
-        
-        if (jComboBox1.getSelectedItem().equals("Muito Fácil")){
+         variaveis var = new variaveis();
+        if (jComboBox1.getSelectedItem().equals("Muito Fácil")) {
+            var.pontosDificuldade = 30;
             jLabel2.setText((String) jComboBox1.getSelectedItem());
-        } else {
-       }
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Fácil")) {
+            var.pontosDificuldade = 25;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Médio")) {
+            var.pontosDificuldade = 20;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Dificil")) {
+            var.pontosDificuldade = 15;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Desafiador")) {
+            var.pontosDificuldade = 10;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Formidável")) {
+            var.pontosDificuldade = 5;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Heróico")) {
+            var.pontosDificuldade = 0;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
+        if (jComboBox1.getSelectedItem().equals("Praticamente Impossível")) {
+            var.pontosDificuldade = -5;
+            jLabel2.setText((String) jComboBox1.getSelectedItem());
+            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+        }
     }//GEN-LAST:event_jbSelecionarActionPerformed
 
     /**
@@ -155,6 +204,7 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jbSelecionar;
     // End of variables declaration//GEN-END:variables
 }
