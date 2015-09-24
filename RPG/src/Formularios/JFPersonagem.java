@@ -39,12 +39,13 @@ public class JFPersonagem extends javax.swing.JFrame {
                 (ds.height - dw.height) / 2);
     }
     //declaração de variaveis
-    int forca;
-    int destreza;
-    int constituicao;
-    int inteligencia;
-    int sabedoria;
-    int carisma;
+    public static int  forca;
+    public static int destreza;
+    public static int constituicao;
+    public static int inteligencia;
+    public static int sabedoria;
+    public static int carisma;
+    public static int fortitude;
     //arraylist
     ArrayList listRaca = new ArrayList();
     ArrayList listClasse = new ArrayList();
@@ -187,7 +188,7 @@ public class JFPersonagem extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 60, -1));
 
         jLabel10.setText("Carisma");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 40, 20));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 50, 20));
 
         jtfForcaPersonagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,17 +250,17 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jtfCarismaPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfCarismaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 120, -1));
+        getContentPane().add(jtfCarismaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 30, -1));
 
         jLabel11.setText("Fortitude");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 60, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 60, -1));
 
         jtfFortitudePersonagem.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfFortitudePersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfFortitudePersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 30, -1));
+        getContentPane().add(jtfFortitudePersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 120, -1));
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 16, -1, -1));
 
         jLabel13.setText("Refexos");
@@ -767,14 +768,22 @@ public class JFPersonagem extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         Integer valor = Integer.parseInt(jtfForcaPersonagem.getText()); 
-                       
-        jtfForcaPersonagem.setText(String.valueOf(valor+1));
+         valor = (valor+1);
+         
+        jtfForcaPersonagem.setText(String.valueOf(valor));
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
       Integer valor = Integer.parseInt(jtfForcaPersonagem.getText()); 
+      valor = (valor-1);
+      if (valor < forca) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
                        
-        jtfForcaPersonagem.setText(String.valueOf(valor-1));
+            jtfForcaPersonagem.setText(String.valueOf(valor));
+        
+        }
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -802,43 +811,72 @@ Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText());
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-Integer valor = Integer.parseInt(jtfFortitudePersonagem.getText()); 
+Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText()); 
                        
-        jtfFortitudePersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+        jtfCarismaPersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
 Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText()); 
+valor = (valor-1);
+      if (valor < destreza) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
                        
-        jtfDestrezaPersonagem.setText(String.valueOf(valor-1));        // TODO add your handling code here:
+        jtfDestrezaPersonagem.setText(String.valueOf(valor));        // TODO add your handling code here:
+      }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
 Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText()); 
-                       
-        jtfConstituicaoPersonagem.setText(String.valueOf(valor-1));         // TODO add your handling code here:
+                       valor = (valor-1);
+      if (valor < constituicao) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
+        jtfConstituicaoPersonagem.setText(String.valueOf(valor));         // TODO add your handling code here:
+      }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 Integer valor = Integer.parseInt(jtfInteligenciaPersonagem.getText()); 
+valor = (valor-1);
+      if (valor < inteligencia) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
                        
-        jtfInteligenciaPersonagem.setText(String.valueOf(valor-1));           // TODO add your handling code here:
+        jtfInteligenciaPersonagem.setText(String.valueOf(valor));           // TODO add your handling code here:
+      }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText()); 
+valor = (valor-1);
+      if (valor < sabedoria) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
                        
-        jtfSabedoriaPersonagem.setText(String.valueOf(valor-1));         // TODO add your handling code here:
+        jtfSabedoriaPersonagem.setText(String.valueOf(valor));         // TODO add your handling code here:
+      }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-Integer valor = Integer.parseInt(jtfFortitudePersonagem.getText()); 
+Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText());
+valor = (valor-1);
+      if (valor < carisma) {
+            JOptionPane.showMessageDialog(null, "Nivel minimo atingido!");
+                
+        } else{
                        
-        jtfFortitudePersonagem.setText(String.valueOf(valor-1));          // TODO add your handling code here:
+        jtfFortitudePersonagem.setText(String.valueOf(valor));          // TODO add your handling code here:
+      }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCRacaInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jCRacaInputMethodTextChanged
-      // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_jCRacaInputMethodTextChanged
 
     private void jCRacaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCRacaItemStateChanged
@@ -860,14 +898,19 @@ Integer valor = Integer.parseInt(jtfFortitudePersonagem.getText());
                 for (Object obj3 : list3) {                                          //<--
                                                                                     //<--
                     Raca r = (Raca) obj3;                                           //<--
-                                                                                    //<--
+                                                                                 //<--
                     forca = (r.getForca_raca()); 
                     jtfForcaPersonagem.setText(String.valueOf(forca));                    //<--
-                    //destreza = (r.getDestreza_raca());                              //<--
-                    //constituicao = (r.getConstituicao_raca());                      //<--
-                    //inteligencia = (r.getInteligencia_raca());                      //<--
-                    //sabedoria = (r.getSabedoria_raca());                            //<--
-                   // carisma = (r.getCarisma_raca());                                //<--
+                    destreza = (r.getDestreza_raca());     
+                    jtfDestrezaPersonagem.setText(String.valueOf(destreza));//<--
+                    constituicao = (r.getConstituicao_raca());
+                    jtfConstituicaoPersonagem.setText(String.valueOf(constituicao));//<--
+                    inteligencia = (r.getInteligencia_raca());
+                    jtfInteligenciaPersonagem.setText(String.valueOf(inteligencia));//<--//<--
+                    sabedoria = (r.getSabedoria_raca());
+                    jtfSabedoriaPersonagem.setText(String.valueOf(sabedoria));//<--//<--
+                    carisma = (r.getCarisma_raca());
+                    jtfCarismaPersonagem.setText(String.valueOf(carisma));//<--//<--
                 }   // TODO add your handling code here:
         // TODO add your handling code here:
                 } catch (SQLException ex) {
