@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Formularios/JFPersonagem.java</file>
-            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Formularios/JFProgressao.java</file>
             <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/conexao/ConexaoBanco.java</file>
+            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Tabelas/Personagens.java</file>
             <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Formularios/JFClasses.java</file>
+            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Formularios/JFPersonagem.java</file>
+            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Tabelas/PersonagensArmas.java</file>
+            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Formularios/JFProgressao.java</file>
+            <file>file:/C:/Users/Micro10/Documents/GitHub/Turma11_4m_tec_inf/RPG/src/Tabelas/Raca.java</file>
         </group>
     </open-files>
 </project-private>
