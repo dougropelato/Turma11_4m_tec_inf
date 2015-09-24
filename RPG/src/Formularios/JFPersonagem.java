@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import tabelas.Classes;
 import tabelas.Personagens;
 
@@ -25,7 +26,11 @@ import tabelas.Personagens;
  *
  * @author Adriel
  */
+
+
 public class JFPersonagem extends javax.swing.JFrame {
+    
+    
     
     public void centralizarComponente() {
         Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
@@ -43,9 +48,11 @@ public class JFPersonagem extends javax.swing.JFrame {
     //arraylist
     ArrayList listRaca = new ArrayList();
     ArrayList listClasse = new ArrayList();
+    
+    
 
     /**
-     * Creates new form JFPersonagem n
+     * Creates new form JFPersonagem
      */
     public JFPersonagem() {
         initComponents();
@@ -165,19 +172,19 @@ public class JFPersonagem extends javax.swing.JFrame {
         getContentPane().add(jtfAlturaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 129, 120, -1));
 
         jLabel5.setText("Força");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 158, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
         jLabel6.setText("Destreza");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 184, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 190, 50, -1));
 
         jLabel7.setText("Constituição");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 70, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 70, -1));
 
         jLabel8.setText("Inteligência");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 239, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 70, -1));
 
         jLabel9.setText("Sabedoria");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 265, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 60, -1));
 
         jLabel10.setText("Carisma");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 40, 20));
@@ -192,7 +199,7 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jtfForcaPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfForcaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 155, 120, -1));
+        getContentPane().add(jtfForcaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 30, -1));
 
         jtfDestrezaPersonagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +211,7 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jtfDestrezaPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfDestrezaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 181, 120, -1));
+        getContentPane().add(jtfDestrezaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 30, -1));
 
         jtfConstituicaoPersonagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +223,7 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jtfConstituicaoPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfConstituicaoPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 207, 120, -1));
+        getContentPane().add(jtfConstituicaoPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 30, -1));
 
         jtfInteligenciaPersonagem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,14 +235,14 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jtfInteligenciaPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfInteligenciaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 236, 120, -1));
+        getContentPane().add(jtfInteligenciaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 30, -1));
 
         jtfSabedoriaPersonagem.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfSabedoriaPersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfSabedoriaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 262, 120, -1));
+        getContentPane().add(jtfSabedoriaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 30, -1));
 
         jtfCarismaPersonagem.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -245,14 +252,14 @@ public class JFPersonagem extends javax.swing.JFrame {
         getContentPane().add(jtfCarismaPersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 120, -1));
 
         jLabel11.setText("Fortitude");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 288, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 60, -1));
 
         jtfFortitudePersonagem.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfFortitudePersonagemKeyTyped(evt);
             }
         });
-        getContentPane().add(jtfFortitudePersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 288, 120, -1));
+        getContentPane().add(jtfFortitudePersonagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 30, -1));
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 16, -1, -1));
 
         jLabel13.setText("Refexos");
@@ -348,6 +355,18 @@ public class JFPersonagem extends javax.swing.JFrame {
         });
         getContentPane().add(jBSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 120, -1));
 
+        jCRaca.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCRacaItemStateChanged(evt);
+            }
+        });
+        jCRaca.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jCRacaInputMethodTextChanged(evt);
+            }
+        });
         getContentPane().add(jCRaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 11, 130, -1));
 
         jLabel19.setText("Classe");
@@ -363,18 +382,103 @@ public class JFPersonagem extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, 120, -1));
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 288, 20, 20));
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 288, 20, 20));
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 263, 20, 20));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 262, 20, 20));
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 236, 20, 20));
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 236, 20, 20));
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 207, 20, 20));
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 207, 20, 20));
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 180, 20, 20));
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 180, 20, 20));
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 155, 20, 20));
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 155, 20, 20));
+
+        jButton2.setText("-");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 40, 20));
+
+        jButton3.setText("+");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 40, 20));
+
+        jButton4.setText("-");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 40, 20));
+
+        jButton5.setText("+");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 40, 20));
+
+        jButton6.setText("-");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 40, 20));
+
+        jButton7.setText("+");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 40, 20));
+
+        jButton8.setText("-");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 40, 20));
+
+        jButton9.setText("+");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 40, 20));
+
+        jButton10.setText("-");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 40, 20));
+
+        jButton11.setText("+");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 40, 20));
+
+        jButton12.setText("-");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 40, 20));
+
+        jButton13.setFont(jButton13.getFont());
+        jButton13.setText("+");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 40, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -400,7 +504,7 @@ public class JFPersonagem extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfClasseArmaduraPersonagemActionPerformed
 
     private void jBSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalvarActionPerformed
-
+/*
         try {
 
             if (jtfAlturaPersonagem.getText().equals("")    ||      jtfBaseDeAtaquePersonagem.getText().equals("")    ||   jtfCarismaPersonagem.getText().equals("")||jtfClasseArmaduraPersonagem.getText().equals("")||jtfConstituicaoPersonagem.getText().equals("")||jtfDestrezaPersonagem.getText().equals("")||jtfForcaPersonagem.getText().equals("") || jtfFortitudePersonagem.getText().equals("") || jtfIdadePersonagem.getText().equals("") || jtfIniciativaPersonagem.getText().equals("") || jtfInteligenciaPersonagem.getText().equals("") || jtfNomePersonagem.getText().equals("") || jtfPesoPersonagem.getText().equals("") || jtfPontosDeVidaPersonagem.getText().equals("") || jtfRefexoPersonagem.getText().equals(""
@@ -408,25 +512,8 @@ public class JFPersonagem extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Favor Preencher todos os campos!");
 
             } else {
-                GenericDAO aDao = new GenericDAO();
-
-                Personagens pers = new Personagens();
-                Raca rc = new Raca();
-
-                rc.setCodigo_raca((int) listRaca.get(jCRaca.getSelectedIndex()));   //pega os atributos da raça
-                List<Object> list = aDao.listar2(Raca.class, rc);                   //que o jogador escolheu
-                for (Object obj3 : list) {                                          //<--
-                                                                                    //<--
-                    Raca r = (Raca) obj3;                                           //<--
-                                                                                    //<--
-                    forca = (r.getForca_raca());                                    //<--
-                    destreza = (r.getDestreza_raca());                              //<--
-                    constituicao = (r.getConstituicao_raca());                      //<--
-                    inteligencia = (r.getInteligencia_raca());                      //<--
-                    sabedoria = (r.getSabedoria_raca());                            //<--
-                    carisma = (r.getCarisma_raca());                                //<--
-                }
-
+               
+               
                 pers.setNome_personagem("");
                 pers.setIdade_personagem(0);
                 pers.setPeso_personagem(0);
@@ -488,7 +575,7 @@ public class JFPersonagem extends javax.swing.JFrame {
             Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        // TODO add your handling code here:
+        // TODO add your handling code here:*/
     }//GEN-LAST:event_jBSalvarActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -508,8 +595,8 @@ public class JFPersonagem extends javax.swing.JFrame {
                 listClasse.add(cl.getCodigo_classe());//adiciona o codigo da classe no array classe
 
             }
-
-            List<Object> list2 = aDao.listar(Raca.class);
+            
+             List<Object> list2 = aDao.listar(Raca.class);
 
             for (Object obj2 : list2) {
 
@@ -520,6 +607,7 @@ public class JFPersonagem extends javax.swing.JFrame {
                 listRaca.add(rc.getCodigo_raca());//adiciona o codigo da raca no array raca
             }
 
+           
         } catch (SQLException ex) {
             Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
@@ -676,6 +764,128 @@ public class JFPersonagem extends javax.swing.JFrame {
     private void jtfIniciativaPersonagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfIniciativaPersonagemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfIniciativaPersonagemActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        Integer valor = Integer.parseInt(jtfForcaPersonagem.getText()); 
+                       
+        jtfForcaPersonagem.setText(String.valueOf(valor+1));
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+      Integer valor = Integer.parseInt(jtfForcaPersonagem.getText()); 
+                       
+        jtfForcaPersonagem.setText(String.valueOf(valor-1));
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText()); 
+                       
+        jtfDestrezaPersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText()); 
+                       
+        jtfConstituicaoPersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+Integer valor = Integer.parseInt(jtfInteligenciaPersonagem.getText()); 
+                       
+        jtfInteligenciaPersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText()); 
+                       
+        jtfSabedoriaPersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+Integer valor = Integer.parseInt(jtfFortitudePersonagem.getText()); 
+                       
+        jtfFortitudePersonagem.setText(String.valueOf(valor+1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText()); 
+                       
+        jtfDestrezaPersonagem.setText(String.valueOf(valor-1));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText()); 
+                       
+        jtfConstituicaoPersonagem.setText(String.valueOf(valor-1));         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+Integer valor = Integer.parseInt(jtfInteligenciaPersonagem.getText()); 
+                       
+        jtfInteligenciaPersonagem.setText(String.valueOf(valor-1));           // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText()); 
+                       
+        jtfSabedoriaPersonagem.setText(String.valueOf(valor-1));         // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+Integer valor = Integer.parseInt(jtfFortitudePersonagem.getText()); 
+                       
+        jtfFortitudePersonagem.setText(String.valueOf(valor-1));          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jCRacaInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jCRacaInputMethodTextChanged
+      // TODO add your handling code here:
+    }//GEN-LAST:event_jCRacaInputMethodTextChanged
+
+    private void jCRacaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCRacaItemStateChanged
+      GenericDAO aDao;
+        try {
+            aDao = new GenericDAO();
+        
+        
+        
+       
+            
+             
+
+                Personagens pers = new Personagens();
+                Raca rc = new Raca();
+
+                rc.setCodigo_raca((int) listRaca.get(jCRaca.getSelectedIndex()));   //pega os atributos da raça
+                List<Object> list3 = aDao.listar2(Raca.class, rc);                   //que o jogador escolheu
+                for (Object obj3 : list3) {                                          //<--
+                                                                                    //<--
+                    Raca r = (Raca) obj3;                                           //<--
+                                                                                    //<--
+                    forca = (r.getForca_raca()); 
+                    jtfForcaPersonagem.setText(String.valueOf(forca));                    //<--
+                    //destreza = (r.getDestreza_raca());                              //<--
+                    //constituicao = (r.getConstituicao_raca());                      //<--
+                    //inteligencia = (r.getInteligencia_raca());                      //<--
+                    //sabedoria = (r.getSabedoria_raca());                            //<--
+                   // carisma = (r.getCarisma_raca());                                //<--
+                }   // TODO add your handling code here:
+        // TODO add your handling code here:
+                } catch (SQLException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchMethodException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvocationTargetException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
+        }    // TODO add your handling code here:
+    }//GEN-LAST:event_jCRacaItemStateChanged
 
     /**
      * @param args the command line arguments
