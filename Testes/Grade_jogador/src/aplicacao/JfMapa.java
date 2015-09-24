@@ -12,11 +12,13 @@ public final class JfMapa extends javax.swing.JFrame {
     public int posicaoGradeY;
     public String nomeAtor;
     public JLabel ator;
+    public JLabel Elemento;
 
     public JfMapa() {
         initComponents();
-        insereGrade(10, 10); //tamx, tamy
-        insereAtor("Nome", 0, 0); //posx, poxy
+        insereGrade(30, 10); //tamx, tamy
+        insereAtor("Nome", 0, 0); //posx, poxy do jogador
+        insereElemento("Nomeelemetno", 2, 0);
     }
 
     @SuppressWarnings("unchecked")
@@ -92,7 +94,9 @@ public final class JfMapa extends javax.swing.JFrame {
                 System.out.println(nome);
                 setPosicaoGradeX(grade.getBounds().x);
                 setPosicaoGradeY(grade.getBounds().y);
-                moveAtor(getAtor(), grade.getBounds().x, grade.getBounds().y);
+                //insereElemento("pedra",grade.getBounds().x, grade.getBounds().y);
+                moveElemento(getElemento(), grade.getBounds().x, grade.getBounds().y);
+                insereElemento("pedra",grade.getBounds().x, grade.getBounds().y);
             }
         });
 
@@ -101,6 +105,10 @@ public final class JfMapa extends javax.swing.JFrame {
 
     public void moveAtor(JLabel ator, int posX, int posY) {
         ator.setLocation(posX, posY);
+    }
+    
+    public void moveElemento(JLabel elemt, int posX, int posY) {
+        elemt.setLocation(posX, posY);
     }
 
     public JLabel criaAtor(String nomeAtor, int x, int y) {
@@ -119,9 +127,39 @@ public final class JfMapa extends javax.swing.JFrame {
 
         return label;
     }
+    
+     public JLabel criaElemento(String nomeElemento, int x, int y) {
+
+        int vem[] = new int[2];
+        JLabel label = new JLabel();
+        label.setName(nomeElemento);
+        label.setBounds(x, y, 35, 35);
+        setElemento(label);
+        label.setIcon(new javax.swing.ImageIcon("src\\imagens\\grama.png"));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                System.out.println(nomeAtor);
+            }
+        });
+
+        return label;
+    }
+
+    public JLabel getElemento() {
+        return Elemento;
+    }
+
+    public void setElemento(JLabel Elemento) {
+        this.Elemento = Elemento;
+    }
 
     public void insereAtor(String ator, int posx, int posy) {
         this.getContentPane().add(criaAtor(String.valueOf(ator), posx, posy), 0);
+        // O zero deixa o ator em cima da grade
+    }
+    
+    public void insereElemento(String ator, int posx, int posy) {
+        this.getContentPane().add(criaElemento(String.valueOf(ator), posx, posy), 0);
         // O zero deixa o ator em cima da grade
     }
 
