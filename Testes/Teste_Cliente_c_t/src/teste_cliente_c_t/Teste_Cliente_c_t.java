@@ -17,18 +17,24 @@ import java.util.Scanner;
  * @author Douglas
  */
 public class Teste_Cliente_c_t {
-
+    
     public static void main(String[] args) throws UnknownHostException, IOException {
         // dispara cliente
-        new Teste_Cliente_c_t("127.0.0.1", 12345).executa();
+        System.out.println("Digite seu nome: ");
+                Scanner teclado = new Scanner(System.in);
+                
+
+        new Teste_Cliente_c_t("127.0.0.1", 12345,teclado.nextLine()).executa();
     }
 
     private String host;
+    private String nome;
     private int porta;
 
-    public Teste_Cliente_c_t(String host, int porta) {
+    public Teste_Cliente_c_t(String host, int porta, String nomes) {
         this.host = host;
-        this.porta = porta;
+        this.porta = porta; 
+        this.nome = nomes;
     }
 
     public void executa() throws UnknownHostException, IOException {
@@ -43,7 +49,7 @@ public class Teste_Cliente_c_t {
         Scanner teclado = new Scanner(System.in);
         PrintStream saida = new PrintStream(cliente.getOutputStream());
         while (teclado.hasNextLine()) {
-            saida.println(teclado.nextLine());
+            saida.println(this.nome+": "+teclado.nextLine());
         }
 
         saida.close();
