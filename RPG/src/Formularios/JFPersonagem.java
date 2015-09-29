@@ -819,11 +819,13 @@ public class JFPersonagem extends javax.swing.JFrame {
 
     private void jBforcaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBforcaMActionPerformed
         Integer valor = Integer.parseInt(jtfForcaPersonagem.getText());
-        valor = (valor + 1);
-
-        jtfForcaPersonagem.setText(String.valueOf(valor));
-        if (verificaPontos() > 80  ) {
-           JOptionPane.showMessageDialog(null, "Deu certo"); 
+        
+        if (valor < 20  ) {
+            valor = (valor + 1);
+            jtfForcaPersonagem.setText(String.valueOf(valor));
+           
+        }else{
+        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
         }
     }//GEN-LAST:event_jBforcaMActionPerformed
 
@@ -841,27 +843,51 @@ public class JFPersonagem extends javax.swing.JFrame {
     }//GEN-LAST:event_jBforcaFActionPerformed
 
     private void jBdestrezaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBdestrezaMActionPerformed
-        Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText());
-
-        jtfDestrezaPersonagem.setText(String.valueOf(valor + 1));        // TODO add your handling code here:
+      Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText());
+        
+        if (valor < 20  ) {
+            valor = (valor + 1);
+            jtfDestrezaPersonagem.setText(String.valueOf(valor));
+           
+        }else{
+        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        }   // TODO add your handling code here:
     }//GEN-LAST:event_jBdestrezaMActionPerformed
 
     private void jBconstituicaoMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBconstituicaoMActionPerformed
         Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText());
-
-        jtfConstituicaoPersonagem.setText(String.valueOf(valor + 1));        // TODO add your handling code here:
+        
+        if (valor < 20  ) {
+            valor = (valor + 1);
+            jtfConstituicaoPersonagem.setText(String.valueOf(valor));
+           
+        }else{
+        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        }   //       // TODO add your handling code here:
     }//GEN-LAST:event_jBconstituicaoMActionPerformed
 
     private void jBinteligenciaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBinteligenciaMActionPerformed
-        Integer valor = Integer.parseInt(jtfInteligenciaPersonagem.getText());
-
-        jtfInteligenciaPersonagem.setText(String.valueOf(valor + 1));        // TODO add your handling code here:
+        Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText());
+        
+        if (valor < 20  ) {
+            valor = (valor + 1);
+            jtfSabedoriaPersonagem.setText(String.valueOf(valor));
+           
+        }else{
+        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        }     
     }//GEN-LAST:event_jBinteligenciaMActionPerformed
 
     private void jBsabedoriaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsabedoriaMActionPerformed
-        Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText());
-
-        jtfSabedoriaPersonagem.setText(String.valueOf(valor + 1));        // TODO add your handling code here:
+       Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText());
+        
+        if (valor < 20  ) {
+            valor = (valor + 1);
+           jtfCarismaPersonagem.setText(String.valueOf(valor));
+           
+        }else{
+        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        }             // TODO add your handling code here:
     }//GEN-LAST:event_jBsabedoriaMActionPerformed
 
     private void jBcarismaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBcarismaMActionPerformed
