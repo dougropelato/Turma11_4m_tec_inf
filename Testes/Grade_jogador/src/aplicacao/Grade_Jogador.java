@@ -16,7 +16,11 @@ public class Grade_Jogador {
      */
     public static void main(String[] args) {
         JfMapa tela2 = new JfMapa();
+        Ferramemtas ff = new Ferramemtas();
+        
+        ff.setVisible(true);
         tela2.setVisible(true);
+        
     }
     
 }
