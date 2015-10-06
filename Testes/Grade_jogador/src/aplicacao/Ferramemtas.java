@@ -39,17 +39,27 @@ public class Ferramemtas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fselecao = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        fselecao.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 381, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(fselecao)
+                .addContainerGap(297, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 318, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(252, Short.MAX_VALUE)
+                .addComponent(fselecao)
+                .addGap(52, 52, 52))
         );
 
         pack();
@@ -100,6 +110,7 @@ public class Ferramemtas extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 System.out.println(nome);
                 ferra.setNome_ferramenta(nome);
+                fselecao.setIcon(new javax.swing.ImageIcon("src\\imagens\\" + nome));
             }
         });
 
@@ -191,7 +202,7 @@ public class Ferramemtas extends javax.swing.JFrame {
                         fnome = "terra.png";
                         break;
                     case 5:
-                        fnome = "grade.png";
+                        fnome = "terra.png";
                         break;
                 }
 
@@ -239,5 +250,6 @@ public class Ferramemtas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fselecao;
     // End of variables declaration//GEN-END:variables
 }

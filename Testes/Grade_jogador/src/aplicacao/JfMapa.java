@@ -19,8 +19,8 @@ public final class JfMapa extends javax.swing.JFrame {
     public JfMapa() {
         initComponents();
         insereGrade(30, 10); //tamx, tamy
-        insereAtor("Nome", 0, 0); //posx, poxy do jogador
-        insereElemento("Nomeelemetno", 2, 0);
+        //  insereAtor("Nome", 0, 0); //posx, poxy do jogador
+        // insereElemento("Nomeelemetno", 0, 0);
     }
 
     @SuppressWarnings("unchecked")
@@ -95,9 +95,11 @@ public final class JfMapa extends javax.swing.JFrame {
                 System.out.println(nome);
                 setPosicaoGradeX(grade.getBounds().x);
                 setPosicaoGradeY(grade.getBounds().y);
-                //insereElemento("pedra",grade.getBounds().x, grade.getBounds().y);
-                moveElemento(getElemento(), grade.getBounds().x, grade.getBounds().y);
-                insereElemento("pedra", grade.getBounds().x, grade.getBounds().y);
+                grade.setIcon(new javax.swing.ImageIcon("src\\imagens\\" + ferra.getNome_ferramenta()));
+
+                // insereElemento("pedra",grade.getBounds().x, grade.getBounds().y);
+                // moveElemento(getElemento(), grade.getBounds().x, grade.getBounds().y);
+                // insereElemento("pedra", grade.getBounds().x, grade.getBounds().y);
             }
         });
 
@@ -131,15 +133,15 @@ public final class JfMapa extends javax.swing.JFrame {
 
     public JLabel criaElemento(String nomeElemento, int x, int y) {
 
-        int vem[] = new int[2];
+        //int vem[] = new int[2];
         JLabel label = new JLabel();
         label.setName(nomeElemento);
         label.setBounds(x, y, 35, 35);
         setElemento(label);
-        label.setIcon(new javax.swing.ImageIcon("src\\imagens\\"+ferra.getNome_ferramenta()));
+        label.setIcon(new javax.swing.ImageIcon("src\\imagens\\" + ferra.getNome_ferramenta()));
         label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                System.out.println(nomeAtor);
+                System.out.println(nomeElemento);
             }
         });
 
@@ -160,7 +162,7 @@ public final class JfMapa extends javax.swing.JFrame {
     }
 
     public void insereElemento(String ator, int posx, int posy) {
-        this.getContentPane().add(criaElemento(String.valueOf(ator), posx, posy), 0);
+        this.getContentPane().add(criaElemento(ator, posx, posy), 0);
         // O zero deixa o ator em cima da grade
     }
 
