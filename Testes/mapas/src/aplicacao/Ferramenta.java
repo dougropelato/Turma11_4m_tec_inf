@@ -5,6 +5,10 @@
  */
 package aplicacao;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Alexjonas
@@ -21,6 +25,20 @@ public class Ferramenta {
     }
 
     String nome_ferramenta;
+
+    List<JLabel> lista = new ArrayList();
+
+    public List<JLabel> getLista() {
+        return lista;
+    }
+
+    public void setLista(List<JLabel> lista) {
+        this.lista = lista;
+    }
+
+    public void addLista(JLabel componet) {
+        this.lista.add(componet);
+    }
 
     public String getNome_ferramenta() {
         return nome_ferramenta;

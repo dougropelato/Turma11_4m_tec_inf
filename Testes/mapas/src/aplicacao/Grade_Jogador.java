@@ -17,7 +17,9 @@ public class Grade_Jogador {
     public static void main(String[] args) {
         JfMapa tela2 = new JfMapa();
         Ferramemtas ff = new Ferramemtas();
+        carrega car = new carrega();
         
+        car.setVisible(true);
         ff.setVisible(true);
         tela2.setVisible(true);
         

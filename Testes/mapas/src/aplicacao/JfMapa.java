@@ -1,5 +1,8 @@
 package aplicacao;
 
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JLabel;
 
 /**
@@ -18,7 +21,7 @@ public final class JfMapa extends javax.swing.JFrame {
 
     public JfMapa() {
         initComponents();
-        insereGrade(30, 10); //tamx, tamy
+        insereGrade(10, 10); //tamx, tamy
         //  insereAtor("Nome", 0, 0); //posx, poxy do jogador
         // insereElemento("Nomeelemetno", 0, 0);
     }
@@ -27,21 +30,77 @@ public final class JfMapa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 411, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(jButton1)
+                .addContainerGap(296, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(373, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        List<JLabel> lista = new ArrayList();
+
+        Component novo;
+        
+        JLabel nn;
+
+        System.out.println(this.getContentPane().getComponentCount());
+        
+        int ale = this.getContentPane().getComponentCount();
+        ferra.lista.clear();
+        for (int i = 0; i < ale; i++) {
+            
+            novo = this.getContentPane().getComponent(i);
+            try {
+                nn = (JLabel) novo;
+                
+                ferra.addLista(nn);
+
+                System.out.println(nn.getName());
+                System.out.println(nn.getLocation());
+                System.out.println(nn.getIcon());
+
+
+                System.out.println("-----------------------------------------");
+
+            }catch(java.lang.ClassCastException e){
+                
+            }
+
+
+
+
+        }
+                        System.out.println("--------------  fim  ------------------");
+                        this.getContentPane().list();
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,6 +141,7 @@ public final class JfMapa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
     public JLabel criaGrade(String nome, int x, int y) {
         JLabel grade = new JLabel();
@@ -97,9 +157,6 @@ public final class JfMapa extends javax.swing.JFrame {
                 setPosicaoGradeY(grade.getBounds().y);
                 grade.setIcon(new javax.swing.ImageIcon("src\\imagens\\" + ferra.getNome_ferramenta()));
 
-                // insereElemento("pedra",grade.getBounds().x, grade.getBounds().y);
-                // moveElemento(getElemento(), grade.getBounds().x, grade.getBounds().y);
-                // insereElemento("pedra", grade.getBounds().x, grade.getBounds().y);
             }
         });
 
