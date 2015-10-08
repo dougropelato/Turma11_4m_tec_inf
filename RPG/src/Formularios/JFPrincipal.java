@@ -11,7 +11,7 @@ import Tabelas.Autenticacao;
 import dao.GenericDAO;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import utilitários.VerificaComandos;
+import Utilitarios.VerificaComandos;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;

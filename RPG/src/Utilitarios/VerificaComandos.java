@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utilitários;
+package Utilitarios;
 
 import Formularios.JFPrincipal;
 import Formularios.JFSelecaoCampanha;
@@ -28,8 +28,8 @@ import java.awt.Color;
 public class VerificaComandos {
 
     Autenticacao auth = Autenticacao.getInstance();
-    Utilitários.Batalhas bata = new Utilitários.Batalhas();
-    Utilitários.Utilitarios utt = new Utilitários.Utilitarios();
+    Utilitarios.Batalhas bata = new Utilitarios.Batalhas();
+    Utilitarios.Utilitarios utt = new Utilitarios.Utilitarios();
     // clase criada so para amanter a autenticação 
 
     public String verificaComando(String[] aux) throws SQLException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, InstantiationException, ClassNotFoundException {

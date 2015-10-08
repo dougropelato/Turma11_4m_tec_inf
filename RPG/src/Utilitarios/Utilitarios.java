@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utilitários;
+package Utilitarios;
 
 import Formularios.JFPrincipal;
 import Tabelas.Autenticacao;
@@ -124,7 +124,7 @@ public class Utilitarios {
         Autenticacao auth = Autenticacao.getInstance();
         GenericDAO gda = new GenericDAO();
         List<Object> lis = new ArrayList();
-        utilitários.Dados dad = new utilitários.Dados();
+        Utilitarios.Dados dad = new Utilitarios.Dados();
 
         lis = gda.listar2(Personagens.class, per);
 

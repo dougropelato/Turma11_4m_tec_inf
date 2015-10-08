@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utilitários;
+package Utilitarios;
 
 import Tabelas.Autenticacao;
 import Tabelas.NpcsCombatentes;
@@ -78,7 +78,7 @@ public class Batalhas {
 
     public List fugir() {
 
-        utilitários.Dados dad = new utilitários.Dados();
+        Utilitarios.Dados dad = new Utilitarios.Dados();
 
         List<String> res = new ArrayList();
         int i;
@@ -149,7 +149,7 @@ public class Batalhas {
     public int verAcerto(Personagens pp, Temporario tp) {
         int res = 0;
 
-        utilitários.Dados dad = new utilitários.Dados();
+        Utilitarios.Dados dad = new Utilitarios.Dados();
 
         if (pp.getModForca() > pp.getModDestreza()) {
             res = dad.getDado(20) + pp.getModForca() + pp.getBase_ataque_personagem() + 13;
@@ -163,7 +163,7 @@ public class Batalhas {
     public int verDefesa(Personagens pp, Temporario tp) throws SQLException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, InstantiationException {
         int res = 0;
 
-        utilitários.Dados dad = new utilitários.Dados();
+        Utilitarios.Dados dad = new Utilitarios.Dados();
         GenericDAO gda = new GenericDAO();
         Escudos es = new Escudos();
 
@@ -185,7 +185,7 @@ public class Batalhas {
         int res = 0;
         GenericDAO gda = new GenericDAO();
         Armas arm = new Armas();
-        utilitários.Dados dad = new utilitários.Dados();
+        Utilitarios.Dados dad = new Utilitarios.Dados();
         arm.setCodigo_arma(tp.getCodigo_arma());
 
         List<Object> aAs = gda.listar2(Armas.class, arm);
