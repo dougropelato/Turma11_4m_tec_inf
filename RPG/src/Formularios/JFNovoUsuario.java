@@ -11,6 +11,7 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import tabelas.Jogadores;
 
 /**
  *
@@ -180,13 +181,15 @@ public class JFNovoUsuario extends javax.swing.JFrame {
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
         
-        Tabelas.NovoUsuario NoUs = new Tabelas.NovoUsuario();
+        Jogadores NoUs = new Jogadores();  
         
-        NoUs.setNome_NovoUsuario(JTFNome.getText());
-        NoUs.setApelido_NovoUsuario(JTFApelido.getText());
-        NoUs.setEmail_NovoUsuario(JTFEmail.getText());
-        NoUs.setSenha_NovoUsuario(JTFSenha.getText());
-        NoUs.setConfirmaSenha_NovoUsuario(JTFConfirmaSenha.getText());
+ 
+        NoUs.setNome_jogador(JTFNome.getText());
+        NoUs.setApelido_jogador(JTFApelido.getText());
+        NoUs.setEmail_jogador(JTFEmail.getText());
+        NoUs.setSenha_jogador(JTFSenha.getText());
+        NoUs.setConfirmaSenha_jogador(JTFConfirmaSenha.getText());
+        //NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));
         
          try {
              gg.adicionar(NoUs);

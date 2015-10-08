@@ -35,20 +35,7 @@ public class Jogadores {
         this.senha_jogador = senha_jogador;
     }
 
-    public Boolean getMestre_jogador() {
-        return mestre_jogador;
-    }
-
-    public void setMestre_jogador(Boolean mestre_jogador) {
-        this.mestre_jogador = mestre_jogador;
-    }
-
-    int codigo_jogador;
-    String nome_jogador;
-    String apelido_jogador;
-    String email_jogador;
-    String senha_jogador;
-    String confirmaSenha_jogador;
+      
 
     public String getApelido_jogador() {
         return apelido_jogador;
@@ -73,6 +60,21 @@ public class Jogadores {
     public void setConfirmaSenha_jogador(String confirmaSenha_jogador) {
         this.confirmaSenha_jogador = confirmaSenha_jogador;
     }
-    Boolean mestre_jogador;
+    
+    int mestre_jogador;
+
+    public int getMestre_jogador() {
+        return mestre_jogador;
+    }
+
+    public void setMestre_jogador(int mestre_jogador) {
+        this.mestre_jogador = mestre_jogador;
+    }
+    int codigo_jogador;
+    String nome_jogador;
+    String apelido_jogador;
+    String email_jogador;
+    String senha_jogador;
+    String confirmaSenha_jogador;
 
 }
