@@ -66,38 +66,33 @@ public final class JfMapa extends javax.swing.JFrame {
         List<JLabel> lista = new ArrayList();
 
         Component novo;
-        
+
         JLabel nn;
 
         System.out.println(this.getContentPane().getComponentCount());
-        
+
         int ale = this.getContentPane().getComponentCount();
         ferra.lista.clear();
         for (int i = 0; i < ale; i++) {
-            
+
             novo = this.getContentPane().getComponent(i);
             try {
                 nn = (JLabel) novo;
-                
+
                 ferra.addLista(nn);
 
-                System.out.println(nn.getName());
-                System.out.println(nn.getLocation());
-                System.out.println(nn.getIcon());
-
+                System.out.println(nn.getName().toString());
+                System.out.println(nn.getIcon().toString());
+                System.out.println(nn.getBounds());
 
                 System.out.println("-----------------------------------------");
 
-            }catch(java.lang.ClassCastException e){
-                
+            } catch (java.lang.ClassCastException e) {
+
             }
 
-
-
-
         }
-                        System.out.println("--------------  fim  ------------------");
-                        this.getContentPane().list();
+        System.out.println("--------------  fim  ------------------");
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
