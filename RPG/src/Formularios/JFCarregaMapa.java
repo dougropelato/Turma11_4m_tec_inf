@@ -5,9 +5,15 @@
  */
 package Formularios;
 
+import Tabelas.Mapas;
 import aplicacao.Ferramenta;
+import dao.GenericDAO;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 
 /**
@@ -70,16 +76,47 @@ public class JFCarregaMapa extends javax.swing.JFrame {
 
         List<JLabel> lista = new ArrayList();
 
-        for (JLabel lista1 : lista) {
+        try {
 
-            JLabel nos = new JLabel();
+            List<Object> ll = new ArrayList();
+            GenericDAO gg = new GenericDAO();
+            Mapas MP = new Mapas();
 
-            nos = lista1;
+            MP.setNome_mapa("teste02");
 
-            this.getContentPane().add(nos);
+            ll = gg.listar2(Mapas.class, MP);
+
+            for (Object lista1 : ll) {
+
+                MP = (Mapas) lista1;
+
+                JLabel nos = new JLabel();
+
+                nos.setBounds(MP.getPosicao_x(), MP.getPosicao_y(), MP.getTamanho_x(), MP.getTamanho_y());
+
+                nos.setIcon(new javax.swing.ImageIcon(MP.getTerreno()));
+
+                this.getContentPane().add(nos);
+
+            }
             this.repaint();
 
+        } catch (SQLException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchMethodException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvocationTargetException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JFCarregaMapa.class.getName()).log(Level.SEVERE, null, ex);
         }
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

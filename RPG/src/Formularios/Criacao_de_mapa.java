@@ -18,7 +18,7 @@ public class Criacao_de_mapa {
      */
     public static void main(String[] args) {
         JfMapa tela2 = new JfMapa();
-        Ferramemtas ff = new Ferramemtas();
+        JFFerramemtas ff = new JFFerramemtas();
         JFCarregaMapa car = new JFCarregaMapa();
 
         car.setVisible(true);

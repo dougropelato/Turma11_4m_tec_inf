@@ -12,12 +12,12 @@ import javax.swing.JLabel;
  *
  * @author Alexjonas
  */
-public class Ferramemtas extends javax.swing.JFrame {
+public class JFFerramemtas extends javax.swing.JFrame {
 
     /**
      * Creates new form Ferramemtas
      */
-    public Ferramemtas() {
+    public JFFerramemtas() {
         initComponents();
         insereGrade(2, 3); //tamx, tamy
 
@@ -51,16 +51,16 @@ public class Ferramemtas extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(72, 72, 72)
                 .addComponent(fselecao)
-                .addContainerGap(297, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(252, Short.MAX_VALUE)
+                .addContainerGap(272, Short.MAX_VALUE)
                 .addComponent(fselecao)
-                .addGap(52, 52, 52))
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -83,21 +83,23 @@ public class Ferramemtas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ferramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFFerramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ferramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFFerramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ferramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFFerramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ferramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFFerramemtas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ferramemtas().setVisible(true);
+                new JFFerramemtas().setVisible(true);
             }
         });
     }
