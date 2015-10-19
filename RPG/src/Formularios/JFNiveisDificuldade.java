@@ -140,7 +140,7 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
         }
         if (jComboBox1.getSelectedItem().equals("Dificil")) {
             var.pontosDificuldade = -5;
-            var.pontosDificuldade = -10;
+            var.pontosExp = -10;
             jLabel2.setText((String) jComboBox1.getSelectedItem());
             jLabel3.setText(String.valueOf(var.pontosDificuldade));
         }
