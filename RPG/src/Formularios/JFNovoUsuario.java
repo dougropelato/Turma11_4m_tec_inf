@@ -18,17 +18,19 @@ import tabelas.Jogadores;
  * @author Jailton
  */
 public class JFNovoUsuario extends javax.swing.JFrame {
-     private final GenericDAO gg;
 
-     public void centralizarComponente() {
+    private final GenericDAO gg;
+
+    public void centralizarComponente() {
         Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension dw = getSize();
         setLocation((ds.width - dw.width) / 2,
                 (ds.height - dw.height) / 2);
-        
+
     }
+
     public JFNovoUsuario() throws SQLException {
-        
+
         initComponents();
         centralizarComponente();
         this.gg = new GenericDAO();
@@ -180,30 +182,35 @@ public class JFNovoUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
-        
-        Jogadores NoUs = new Jogadores();  
-        
- 
+
+        Jogadores NoUs = new Jogadores();
+
         NoUs.setNome_jogador(JTFNome.getText());
         NoUs.setApelido_jogador(JTFApelido.getText());
         NoUs.setEmail_jogador(JTFEmail.getText());
         NoUs.setSenha_jogador(JTFSenha.getText());
         NoUs.setConfirmaSenha_jogador(JTFConfirmaSenha.getText());
-        //NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));
-        
-         try {
-             gg.adicionar(NoUs);
-         } catch (ClassNotFoundException ex) {
-             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-         } catch (SQLException ex) {
-             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-         } catch (IllegalArgumentException ex) {
-             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-         } catch (IllegalAccessException ex) {
-             Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-      
+
+       /* if (JCMestre.isSelected()) {
+            JCMestre.setText("1");
+        } else {
+            JCMestre.setText("0");
+        }
+        NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));*/
+
+        try {
+            gg.adicionar(NoUs);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
     }//GEN-LAST:event_JBCadastrarActionPerformed
 
     /**

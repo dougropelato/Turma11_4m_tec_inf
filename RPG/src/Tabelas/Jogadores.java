@@ -61,8 +61,6 @@ public class Jogadores {
         this.confirmaSenha_jogador = confirmaSenha_jogador;
     }
     
-    int mestre_jogador;
-
     public int getMestre_jogador() {
         return mestre_jogador;
     }
@@ -76,5 +74,6 @@ public class Jogadores {
     String email_jogador;
     String senha_jogador;
     String confirmaSenha_jogador;
+    int mestre_jogador;
 
 }
