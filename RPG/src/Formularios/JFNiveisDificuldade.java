@@ -46,7 +46,7 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Muito Fácil", "Fácil", "Médio", "Dificil", "Desafiador", "Formidável", "Heróico", "Praticamente Impossível", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fácil", "Médio", "Dificil" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -115,54 +115,37 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
 
     public class variaveis {
         int pontosDificuldade;
+        int pontosExp;
         
         public variaveis() {
     pontosDificuldade = 0;
+    pontosExp = 0;
 }
     }
     
     private void jbSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSelecionarActionPerformed
          variaveis var = new variaveis();
-        if (jComboBox1.getSelectedItem().equals("Muito Fácil")) {
-            var.pontosDificuldade = 30;
-            jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
-        }
+       
         if (jComboBox1.getSelectedItem().equals("Fácil")) {
-            var.pontosDificuldade = 25;
+            var.pontosDificuldade = 5; // O personagem irá receber 5 pontos de bonus para calculo da batalha
+            var.pontosExp = 10; // O personagem irá receber um percentual de 10% para ganho de experiencia
             jLabel2.setText((String) jComboBox1.getSelectedItem());
             jLabel3.setText(String.valueOf(var.pontosDificuldade));
         }
         if (jComboBox1.getSelectedItem().equals("Médio")) {
-            var.pontosDificuldade = 20;
+            var.pontosDificuldade = 0;
+            var.pontosExp = 0;
             jLabel2.setText((String) jComboBox1.getSelectedItem());
             jLabel3.setText(String.valueOf(var.pontosDificuldade));
         }
         if (jComboBox1.getSelectedItem().equals("Dificil")) {
-            var.pontosDificuldade = 15;
-            jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
-        }
-        if (jComboBox1.getSelectedItem().equals("Desafiador")) {
-            var.pontosDificuldade = 10;
-            jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
-        }
-        if (jComboBox1.getSelectedItem().equals("Formidável")) {
-            var.pontosDificuldade = 5;
-            jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
-        }
-        if (jComboBox1.getSelectedItem().equals("Heróico")) {
-            var.pontosDificuldade = 0;
-            jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
-        }
-        if (jComboBox1.getSelectedItem().equals("Praticamente Impossível")) {
             var.pontosDificuldade = -5;
+            var.pontosDificuldade = -10;
             jLabel2.setText((String) jComboBox1.getSelectedItem());
             jLabel3.setText(String.valueOf(var.pontosDificuldade));
         }
+       
+   
     }//GEN-LAST:event_jbSelecionarActionPerformed
 
     /**
