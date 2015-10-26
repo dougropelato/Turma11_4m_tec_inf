@@ -28,12 +28,15 @@ import tabelas.Personagens;
  */
 public class JFPersonagem extends javax.swing.JFrame {
 
+    public static int VarGlobal = 0;
+
     public void centralizarComponente() {
         Dimension ds = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension dw = getSize();
         setLocation((ds.width - dw.width) / 2,
                 (ds.height - dw.height) / 2);
     }
+
     //declaração de variaveis
     public static int forca;
     public static int destreza;
@@ -61,7 +64,7 @@ public class JFPersonagem extends javax.swing.JFrame {
         jBinteligenciaM.setEnabled(false);
 
     }
-    
+
     public void habilitaBotao() {
         jBforcaF.setEnabled(true);
         jBforcaM.setEnabled(true);
@@ -77,13 +80,12 @@ public class JFPersonagem extends javax.swing.JFrame {
         jBinteligenciaM.setEnabled(true);
 
     }
-    
-    public int verificaPontos(){
-       int verifica = (Integer.parseInt(jtfInteligenciaPersonagem.getText()))+(Integer.parseInt(jtfCarismaPersonagem.getText()))+(Integer.parseInt(jtfSabedoriaPersonagem.getText()))+(Integer.parseInt(jtfDestrezaPersonagem.getText()))+(Integer.parseInt(jtfConstituicaoPersonagem.getText()))+(Integer.parseInt(jtfForcaPersonagem.getText())); 
-        
-       
-       return verifica;
-    
+
+    public int verificaPontos() {
+        int verifica = (Integer.parseInt(jtfInteligenciaPersonagem.getText())) + (Integer.parseInt(jtfCarismaPersonagem.getText())) + (Integer.parseInt(jtfSabedoriaPersonagem.getText())) + (Integer.parseInt(jtfDestrezaPersonagem.getText())) + (Integer.parseInt(jtfConstituicaoPersonagem.getText())) + (Integer.parseInt(jtfForcaPersonagem.getText()));
+
+        return verifica;
+
     }
 
     /**
@@ -643,7 +645,7 @@ public class JFPersonagem extends javax.swing.JFrame {
                 jCRaca.addItem(Raca);// adiciona o nome da raca no comboBox
                 listRaca.add(rc.getCodigo_raca());//adiciona o codigo da raca no array raca
             }
-                desabilitaBotao();
+            desabilitaBotao();
         } catch (SQLException ex) {
             Logger.getLogger(JFPersonagem.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
@@ -818,14 +820,22 @@ public class JFPersonagem extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfIniciativaPersonagemActionPerformed
 
     private void jBforcaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBforcaMActionPerformed
-        Integer valor = Integer.parseInt(jtfForcaPersonagem.getText());
-        
-        if (valor < 20  ) {
-            valor = (valor + 1);
-            jtfForcaPersonagem.setText(String.valueOf(valor));
-           
-        }else{
-        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+
+            Integer valor = Integer.parseInt(jtfForcaPersonagem.getText());
+
+            if (valor < 20) {
+                valor = (valor + 1);
+
+                jtfForcaPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
+
         }
     }//GEN-LAST:event_jBforcaMActionPerformed
 
@@ -843,57 +853,89 @@ public class JFPersonagem extends javax.swing.JFrame {
     }//GEN-LAST:event_jBforcaFActionPerformed
 
     private void jBdestrezaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBdestrezaMActionPerformed
-      Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText());
-        
-        if (valor < 20  ) {
-            valor = (valor + 1);
-            jtfDestrezaPersonagem.setText(String.valueOf(valor));
-           
-        }else{
-        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+            Integer valor = Integer.parseInt(jtfDestrezaPersonagem.getText());
+
+            if (valor < 20) {
+                valor = (valor + 1);
+                jtfDestrezaPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
         }   // TODO add your handling code here:
     }//GEN-LAST:event_jBdestrezaMActionPerformed
 
     private void jBconstituicaoMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBconstituicaoMActionPerformed
-        Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText());
-        
-        if (valor < 20  ) {
-            valor = (valor + 1);
-            jtfConstituicaoPersonagem.setText(String.valueOf(valor));
-           
-        }else{
-        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+
+            Integer valor = Integer.parseInt(jtfConstituicaoPersonagem.getText());
+
+            if (valor < 20) {
+                valor = (valor + 1);
+                jtfConstituicaoPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
         }   //       // TODO add your handling code here:
     }//GEN-LAST:event_jBconstituicaoMActionPerformed
 
     private void jBinteligenciaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBinteligenciaMActionPerformed
-        Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText());
-        
-        if (valor < 20  ) {
-            valor = (valor + 1);
-            jtfSabedoriaPersonagem.setText(String.valueOf(valor));
-           
-        }else{
-        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
-        }     
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+            Integer valor = Integer.parseInt(jtfInteligenciaPersonagem.getText());
+
+            if (valor < 20) {
+                valor = (valor + 1);
+                jtfInteligenciaPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
+        }
     }//GEN-LAST:event_jBinteligenciaMActionPerformed
 
     private void jBsabedoriaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsabedoriaMActionPerformed
-       Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText());
-        
-        if (valor < 20  ) {
-            valor = (valor + 1);
-           jtfCarismaPersonagem.setText(String.valueOf(valor));
-           
-        }else{
-        JOptionPane.showMessageDialog(null, "Maximo de ponto: 20"); 
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+            Integer valor = Integer.parseInt(jtfSabedoriaPersonagem.getText());
+
+            if (valor < 20) {
+                valor = (valor + 1);
+                jtfSabedoriaPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
         }             // TODO add your handling code here:
     }//GEN-LAST:event_jBsabedoriaMActionPerformed
 
     private void jBcarismaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBcarismaMActionPerformed
-        Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText());
+        VarGlobal = Integer.parseInt(jtfForcaPersonagem.getText()) + Integer.parseInt(jtfDestrezaPersonagem.getText()) + Integer.parseInt(jtfConstituicaoPersonagem.getText()) + Integer.parseInt(jtfInteligenciaPersonagem.getText()) + Integer.parseInt(jtfSabedoriaPersonagem.getText()) + Integer.parseInt(jtfCarismaPersonagem.getText());
+        if (VarGlobal >= 80) {
+            JOptionPane.showMessageDialog(null, "Máximo 80 pontos!");
+        } else {
+            Integer valor = Integer.parseInt(jtfCarismaPersonagem.getText());
 
-        jtfCarismaPersonagem.setText(String.valueOf(valor + 1));        // TODO add your handling code here:
+            if (valor < 20) {
+                valor = (valor + 1);
+                jtfCarismaPersonagem.setText(String.valueOf(valor));
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Maximo de ponto: 20");
+            }
+        }         // TODO add your handling code here:
     }//GEN-LAST:event_jBcarismaMActionPerformed
 
     private void jBdestrezaFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBdestrezaFActionPerformed
