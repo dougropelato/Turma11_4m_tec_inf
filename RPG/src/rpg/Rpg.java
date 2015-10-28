@@ -16,9 +16,26 @@ import java.sql.SQLException;
  */
 public class Rpg {
 
-    /**
-     * @param args the command line arguments
-     */
+   static int pontosDificuldade;
+   static int pontosExp;
+
+    public static int getPontosDificuldade() {
+        return pontosDificuldade;
+    }
+
+    public static void setPontosDificuldade(int pontosDificuldade) {
+        Rpg.pontosDificuldade = pontosDificuldade;
+    }
+
+    public static int getPontosExp() {
+        return pontosExp;
+    }
+
+    public static void setPontosExp(int pontosExp) {
+        Rpg.pontosExp = pontosExp;
+    }
+   
+   
     public static void main(String[] args) throws SQLException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, InstantiationException, ClassNotFoundException {
 
         JFPrincipal jfprim = JFPrincipal.getInstance();

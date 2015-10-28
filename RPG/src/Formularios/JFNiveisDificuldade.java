@@ -113,36 +113,27 @@ public class JFNiveisDificuldade extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    public class variaveis {
-        int pontosDificuldade;
-        int pontosExp;
-        
-        public variaveis() {
-    pontosDificuldade = 0;
-    pontosExp = 0;
-}
-    }
+   
     
     private void jbSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSelecionarActionPerformed
-         variaveis var = new variaveis();
-       
+
         if (jComboBox1.getSelectedItem().equals("Fácil")) {
-            var.pontosDificuldade = 5; // O personagem irá receber 5 pontos de bonus para calculo da batalha
-            var.pontosExp = 10; // O personagem irá receber um percentual de 10% para ganho de experiencia
+            rpg.Rpg.setPontosDificuldade(5); // O personagem irá receber 5 pontos de bonus para calculo da batalha
+            rpg.Rpg.setPontosExp(10); // O personagem irá receber um percentual de 10% para ganho de experiencia
             jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+            jLabel3.setText(String.valueOf(rpg.Rpg.getPontosDificuldade()));
         }
         if (jComboBox1.getSelectedItem().equals("Médio")) {
-            var.pontosDificuldade = 0;
-            var.pontosExp = 0;
+            rpg.Rpg.setPontosDificuldade(0);
+            rpg.Rpg.setPontosExp(0);
             jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+            jLabel3.setText(String.valueOf(rpg.Rpg.getPontosDificuldade()));
         }
         if (jComboBox1.getSelectedItem().equals("Dificil")) {
-            var.pontosDificuldade = -5;
-            var.pontosExp = -10;
+            rpg.Rpg.setPontosDificuldade(-5);
+            rpg.Rpg.setPontosExp(-10);
             jLabel2.setText((String) jComboBox1.getSelectedItem());
-            jLabel3.setText(String.valueOf(var.pontosDificuldade));
+            jLabel3.setText(String.valueOf(rpg.Rpg.getPontosDificuldade()));
         }
        
    
