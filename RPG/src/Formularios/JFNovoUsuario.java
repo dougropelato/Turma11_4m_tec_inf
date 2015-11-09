@@ -49,8 +49,6 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         JTFNome = new javax.swing.JTextField();
         JTFApelido = new javax.swing.JTextField();
         JTFEmail = new javax.swing.JTextField();
-        JTFSenha = new javax.swing.JTextField();
-        JTFConfirmaSenha = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -60,6 +58,8 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         JBCadastrar = new javax.swing.JButton();
         JBCancelar = new javax.swing.JButton();
         JCMestre = new javax.swing.JCheckBox();
+        JTFSenha = new javax.swing.JPasswordField();
+        JTFConfirmaSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -115,8 +115,8 @@ public class JFNovoUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JTFConfirmaSenha)
-                            .addComponent(JTFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTFSenha)
+                            .addComponent(JTFConfirmaSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -160,14 +160,14 @@ public class JFNovoUsuario extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(JTFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(JCMestre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTFConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(JTFConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBCadastrar)
@@ -179,7 +179,8 @@ public class JFNovoUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
@@ -193,7 +194,7 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         NoUs.setConfirmaSenha_jogador(JTFConfirmaSenha.getText());
 
         if (JCMestre.isSelected()) {
-            JCMestre.setText("b");
+            JCMestre.setText("1");
         } else {
             JCMestre.setText("0");
         }
@@ -265,10 +266,10 @@ public class JFNovoUsuario extends javax.swing.JFrame {
     private javax.swing.JButton JBCancelar;
     private javax.swing.JCheckBox JCMestre;
     private javax.swing.JTextField JTFApelido;
-    private javax.swing.JTextField JTFConfirmaSenha;
+    private javax.swing.JPasswordField JTFConfirmaSenha;
     private javax.swing.JTextField JTFEmail;
     private javax.swing.JTextField JTFNome;
-    private javax.swing.JTextField JTFSenha;
+    private javax.swing.JPasswordField JTFSenha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
