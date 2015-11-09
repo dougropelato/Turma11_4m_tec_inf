@@ -11,6 +11,7 @@ import java.awt.Toolkit;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import tabelas.Jogadores;
 
 /**
@@ -191,23 +192,30 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         NoUs.setSenha_jogador(JTFSenha.getText());
         NoUs.setConfirmaSenha_jogador(JTFConfirmaSenha.getText());
 
-       /* if (JCMestre.isSelected()) {
-            JCMestre.setText("1");
+        if (JCMestre.isSelected()) {
+            JCMestre.setText("b");
         } else {
             JCMestre.setText("0");
         }
-        NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));*/
+        NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));
 
-        try {
-            gg.adicionar(NoUs);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalArgumentException ex) {
-            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        if (JTFSenha.getText().equals(JTFConfirmaSenha.getText()) ) {
+
+            try {
+                gg.adicionar(NoUs);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalArgumentException ex) {
+                Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalAccessException ex) {
+                Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            JOptionPane.showMessageDialog(null, "Usuário cadastrado!");
+
+        } else if (JTFSenha.getText() != JTFConfirmaSenha.getText()) {
+            JOptionPane.showMessageDialog(null, "Senhas não conferem, verifique!");
         }
 
 
