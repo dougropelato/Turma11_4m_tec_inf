@@ -124,7 +124,8 @@ public class Utilitarios {
         Autenticacao auth = Autenticacao.getInstance();
         GenericDAO gda = new GenericDAO();
         List<Object> lis = new ArrayList();
-        Utilitarios.Dados dad = new Utilitarios.Dados();
+        Dados dad = new Dados();
+        //Utilitarios.Dados dad = new Utilitarios.Dados();
 
         lis = gda.listar2(Personagens.class, per);
 

@@ -28,8 +28,10 @@ import java.awt.Color;
 public class VerificaComandos {
 
     Autenticacao auth = Autenticacao.getInstance();
-    Utilitarios.Batalhas bata = new Utilitarios.Batalhas();
-    Utilitarios.Utilitarios utt = new Utilitarios.Utilitarios();
+    Batalhas bata = new Batalhas();
+    Utilitarios utt = new Utilitarios();
+//    Utilitarios.Batalhas bata = new Utilitarios.Batalhas();
+  //  Utilitarios.Utilitarios utt = new Utilitarios.Utilitarios();
     // clase criada so para amanter a autenticação 
 
     public String verificaComando(String[] aux) throws SQLException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, InstantiationException, ClassNotFoundException {
@@ -57,13 +59,7 @@ public class VerificaComandos {
 
             res = "doctor who ?";
         } // modo adm
-        // lista comandos
-        if (aux[0].equalsIgnoreCase("Comandos")) {
-            jfprim.jTextArea3.setText(listaComando());
-
-            res = "lista dos comandos";
-        } // modo adm
-
+        
         if (aux[0].equalsIgnoreCase("logoff")) {
             auth.setCodigo_jogador(0);
             auth.setMestre_jogador(false);

@@ -338,14 +338,14 @@ public class JFPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLnome_campanha;
-    private javax.swing.JLabel jLnome_jogador;
-    private javax.swing.JLabel jLnome_personagem;
-    private javax.swing.JLabel jLstatus;
-    private javax.swing.JLabel jLvida_personagem;
-    private javax.swing.JPanel jPanel2;
+    public static javax.swing.JLabel jLnome_campanha;
+    public static javax.swing.JLabel jLnome_jogador;
+    public static javax.swing.JLabel jLnome_personagem;
+    public static javax.swing.JLabel jLstatus;
+    public static javax.swing.JLabel jLvida_personagem;
+    public static javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public static javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbColetar;
     private javax.swing.JButton jbFalar;
