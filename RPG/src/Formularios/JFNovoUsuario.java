@@ -200,7 +200,7 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         }
         NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));
 
-        if (JTFSenha.getText().equals(JTFConfirmaSenha.getText()) ) {
+        if (JTFSenha.toString().equals(JTFConfirmaSenha.toString()) ) {
 
             try {
                 gg.adicionar(NoUs);
