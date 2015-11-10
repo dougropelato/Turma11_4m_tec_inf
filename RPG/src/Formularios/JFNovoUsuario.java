@@ -8,6 +8,9 @@ package Formularios;
 import dao.GenericDAO;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,6 +39,19 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         centralizarComponente();
         this.gg = new GenericDAO();
     }
+
+    public static String md5(String senha){  
+        String sen = "";  
+        MessageDigest md = null;  
+        try {  
+            md = MessageDigest.getInstance("MD5");  
+        } catch (NoSuchAlgorithmException e) {  
+            e.printStackTrace();  
+        }  
+        BigInteger hash = new BigInteger(1, md.digest(senha.getBytes()));  
+        sen = hash.toString(16);              
+        return sen;  
+    }  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -179,8 +195,8 @@ public class JFNovoUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_JBCancelarActionPerformed
 
     private void JBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCadastrarActionPerformed
@@ -200,9 +216,13 @@ public class JFNovoUsuario extends javax.swing.JFrame {
         }
         NoUs.setMestre_jogador(Integer.parseInt(JCMestre.getText()));
 
-        if (JTFSenha.toString().equals(JTFConfirmaSenha.toString()) ) {
+        if (JTFSenha.getText().equals(JTFConfirmaSenha.getText())) {
 
             try {
+                
+                NoUs.setSenha_jogador(md5(JTFSenha.toString()));
+                NoUs.setSenha_jogador(md5(JTFConfirmaSenha.toString()));
+                
                 gg.adicionar(NoUs);
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(JFNovoUsuario.class.getName()).log(Level.SEVERE, null, ex);
@@ -215,7 +235,7 @@ public class JFNovoUsuario extends javax.swing.JFrame {
             }
             JOptionPane.showMessageDialog(null, "Usuário cadastrado!");
 
-        } else if (JTFSenha.getText() != JTFConfirmaSenha.getText()) {
+        } else if (JTFSenha.getText()!= JTFConfirmaSenha.getText()) {
             JOptionPane.showMessageDialog(null, "Senhas não conferem, verifique!");
         }
 
