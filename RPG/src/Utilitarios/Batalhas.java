@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Utilitarios;
+package Utilitários;
 
 import Tabelas.Autenticacao;
 import Tabelas.NpcsCombatentes;
@@ -41,12 +41,12 @@ public class Batalhas {
         Personagens pno = new Personagens();
         List<Personagens> npp = new ArrayList();
 
-        per.setCodigo_personagem(auth.getCodigo_personagem());
-        tem.setCodigo_personagem(per.getCodigo_personagem());
+        per.setCodigo_personagem(1);//auth.getCodigo_personagem()
+        tem.setCodigo_personagem(2);//per.getCodigo_personagem()
 
         ut.carregaPersonagem(per, tem);
 
-        nn.setCodigo_npc(auth.getCodigo_npc());
+        nn.setCodigo_npc(1);//auth.getCodigo_npc()
         List asd = new ArrayList();
 
         asd = gd.listar3(nn, Personagens.class, NpcsCombatentes.class);
@@ -77,8 +77,8 @@ public class Batalhas {
     }
 
     public List fugir() {
-        Dados dad = new Dados();
-       //     Utilitarios.Dados dad = new Utilitarios.Dados();
+
+        utilitários.Dados dad = new utilitários.Dados();
 
         List<String> res = new ArrayList();
         int i;
@@ -113,6 +113,11 @@ public class Batalhas {
                     res = npc.getNome_personagem() + " recebeu um ataque violento \n";
                     res += "de " + dano + " pontos de dano e morre";
                     auth.setStatus_atual("Venceu");
+                    VerificaXP ver = new VerificaXP();
+                    int qtdNpc = 1;
+                    int xp = ver.XP(tem.getNivel_atual_personage(),qtdNpc);
+                    
+                    
                 }
 
             } else {
@@ -148,9 +153,8 @@ public class Batalhas {
 
     public int verAcerto(Personagens pp, Temporario tp) {
         int res = 0;
-        
-        Dados dad = new Dados();
-        //Utilitarios.Dados dad = new Utilitarios.Dados();
+
+        utilitários.Dados dad = new utilitários.Dados();
 
         if (pp.getModForca() > pp.getModDestreza()) {
             res = dad.getDado(20) + pp.getModForca() + pp.getBase_ataque_personagem() + 13;
@@ -164,8 +168,7 @@ public class Batalhas {
     public int verDefesa(Personagens pp, Temporario tp) throws SQLException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, InstantiationException {
         int res = 0;
 
-        Dados dad = new Dados();
-        //Utilitarios.Dados dad = new Utilitarios.Dados();
+        utilitários.Dados dad = new utilitários.Dados();
         GenericDAO gda = new GenericDAO();
         Escudos es = new Escudos();
 
@@ -187,8 +190,7 @@ public class Batalhas {
         int res = 0;
         GenericDAO gda = new GenericDAO();
         Armas arm = new Armas();
-        Dados dad = new Dados();
-        //Utilitarios.Dados dad = new Utilitarios.Dados();
+        utilitários.Dados dad = new utilitários.Dados();
         arm.setCodigo_arma(tp.getCodigo_arma());
 
         List<Object> aAs = gda.listar2(Armas.class, arm);
