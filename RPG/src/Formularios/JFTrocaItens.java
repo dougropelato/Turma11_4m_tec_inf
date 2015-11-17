@@ -5,9 +5,25 @@
  */
 package Formularios;
 
+import dao.GenericDAO;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import tabelas.Armaduras;
+import tabelas.Armas;
+import tabelas.Consumiveis;
+import tabelas.Escudos;
+import tabelas.PersonagensArmaduras;
+import tabelas.PersonagensArmas;
+import tabelas.PersonagensConsumiveis;
+import tabelas.PersonagensEscudos;
+
 /**
  *
- * @author Felipe Ittner
+ * @author Felipe Ittner, Withoeft
  */
 public class JFTrocaItens extends javax.swing.JFrame {
 
@@ -27,170 +43,170 @@ public class JFTrocaItens extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jcComprarArmas = new javax.swing.JComboBox();
-        jcVenderArmas = new javax.swing.JComboBox();
-        jcComprarArmaduras = new javax.swing.JComboBox();
-        jcComprarEscudos = new javax.swing.JComboBox();
-        jcComprarConsumiveis = new javax.swing.JComboBox();
-        jcVenderArmaduras = new javax.swing.JComboBox();
-        jcVenderEscudos = new javax.swing.JComboBox();
-        jcVenderConsumiveis = new javax.swing.JComboBox();
+        jcArmasboxPlayer1 = new javax.swing.JComboBox();
+        jcArmasboxPlayer2 = new javax.swing.JComboBox();
+        jcArmadurasboxPlayer1 = new javax.swing.JComboBox();
+        jcEscudosboxPlayer1 = new javax.swing.JComboBox();
+        jcConsumiveisboxPlayer1 = new javax.swing.JComboBox();
+        jcArmadurasboxPlayer2 = new javax.swing.JComboBox();
+        jcEscudosboxPlayer2 = new javax.swing.JComboBox();
+        jcConsumiveisboxPlayer2 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        jcbComprarArmas = new javax.swing.JCheckBox();
-        jcbComprarArmaduras = new javax.swing.JCheckBox();
-        jcbComprarEscudos = new javax.swing.JCheckBox();
-        jcbComprarConsumiveis = new javax.swing.JCheckBox();
-        jcbVenderArmas = new javax.swing.JCheckBox();
-        jcbVenderArmaduras = new javax.swing.JCheckBox();
-        jcbVenderEscudos = new javax.swing.JCheckBox();
-        jcbVenderConsumiveis = new javax.swing.JCheckBox();
+        jcbArmasPlayer1 = new javax.swing.JCheckBox();
+        jcbArmadurasPlayer1 = new javax.swing.JCheckBox();
+        jcbEscudosPlayer1 = new javax.swing.JCheckBox();
+        jcbConsumiveisPlayer1 = new javax.swing.JCheckBox();
+        jcbArmasPlayer2 = new javax.swing.JCheckBox();
+        jcbArmadurasPlayer2 = new javax.swing.JCheckBox();
+        jcbEscudosPlayer2 = new javax.swing.JCheckBox();
+        jcbConsumiveisPlayer2 = new javax.swing.JCheckBox();
         lbVender = new javax.swing.JLabel();
         jlListPreçoTotalComprar = new javax.swing.JLabel();
         lbVender1 = new javax.swing.JLabel();
         jlListPreçoTotalComprar1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        jConfirmarPlayer2 = new javax.swing.JCheckBox();
+        jConfirmarPlayer1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jcComprarArmas.addItemListener(new java.awt.event.ItemListener() {
+        jcArmasboxPlayer1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcComprarArmasItemStateChanged(evt);
+                jcArmasboxPlayer1ItemStateChanged(evt);
             }
         });
-        jcComprarArmas.addActionListener(new java.awt.event.ActionListener() {
+        jcArmasboxPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcComprarArmasActionPerformed(evt);
+                jcArmasboxPlayer1ActionPerformed(evt);
             }
         });
 
-        jcVenderArmas.addItemListener(new java.awt.event.ItemListener() {
+        jcArmasboxPlayer2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcVenderArmasItemStateChanged(evt);
+                jcArmasboxPlayer2ItemStateChanged(evt);
             }
         });
-        jcVenderArmas.addActionListener(new java.awt.event.ActionListener() {
+        jcArmasboxPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcVenderArmasActionPerformed(evt);
+                jcArmasboxPlayer2ActionPerformed(evt);
             }
         });
 
-        jcComprarArmaduras.addItemListener(new java.awt.event.ItemListener() {
+        jcArmadurasboxPlayer1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcComprarArmadurasItemStateChanged(evt);
+                jcArmadurasboxPlayer1ItemStateChanged(evt);
             }
         });
-        jcComprarArmaduras.addActionListener(new java.awt.event.ActionListener() {
+        jcArmadurasboxPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcComprarArmadurasActionPerformed(evt);
+                jcArmadurasboxPlayer1ActionPerformed(evt);
             }
         });
 
-        jcComprarEscudos.addItemListener(new java.awt.event.ItemListener() {
+        jcEscudosboxPlayer1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcComprarEscudosItemStateChanged(evt);
+                jcEscudosboxPlayer1ItemStateChanged(evt);
             }
         });
-        jcComprarEscudos.addActionListener(new java.awt.event.ActionListener() {
+        jcEscudosboxPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcComprarEscudosActionPerformed(evt);
+                jcEscudosboxPlayer1ActionPerformed(evt);
             }
         });
 
-        jcComprarConsumiveis.addItemListener(new java.awt.event.ItemListener() {
+        jcConsumiveisboxPlayer1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcComprarConsumiveisItemStateChanged(evt);
+                jcConsumiveisboxPlayer1ItemStateChanged(evt);
             }
         });
-        jcComprarConsumiveis.addActionListener(new java.awt.event.ActionListener() {
+        jcConsumiveisboxPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcComprarConsumiveisActionPerformed(evt);
+                jcConsumiveisboxPlayer1ActionPerformed(evt);
             }
         });
 
-        jcVenderArmaduras.addItemListener(new java.awt.event.ItemListener() {
+        jcArmadurasboxPlayer2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcVenderArmadurasItemStateChanged(evt);
+                jcArmadurasboxPlayer2ItemStateChanged(evt);
             }
         });
 
-        jcVenderEscudos.addItemListener(new java.awt.event.ItemListener() {
+        jcEscudosboxPlayer2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcVenderEscudosItemStateChanged(evt);
+                jcEscudosboxPlayer2ItemStateChanged(evt);
             }
         });
 
-        jcVenderConsumiveis.addItemListener(new java.awt.event.ItemListener() {
+        jcConsumiveisboxPlayer2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jcVenderConsumiveisItemStateChanged(evt);
+                jcConsumiveisboxPlayer2ItemStateChanged(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         jLabel1.setText("Tela de Troca");
 
-        jcbComprarArmas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbComprarArmas.setText("Armas");
-        jcbComprarArmas.setHideActionText(true);
-        jcbComprarArmas.addActionListener(new java.awt.event.ActionListener() {
+        jcbArmasPlayer1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbArmasPlayer1.setText("Armas");
+        jcbArmasPlayer1.setHideActionText(true);
+        jcbArmasPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbComprarArmasActionPerformed(evt);
+                jcbArmasPlayer1ActionPerformed(evt);
             }
         });
 
-        jcbComprarArmaduras.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbComprarArmaduras.setText("Armaduras");
-        jcbComprarArmaduras.addActionListener(new java.awt.event.ActionListener() {
+        jcbArmadurasPlayer1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbArmadurasPlayer1.setText("Armaduras");
+        jcbArmadurasPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbComprarArmadurasActionPerformed(evt);
+                jcbArmadurasPlayer1ActionPerformed(evt);
             }
         });
 
-        jcbComprarEscudos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbComprarEscudos.setText("Escudos");
-        jcbComprarEscudos.addActionListener(new java.awt.event.ActionListener() {
+        jcbEscudosPlayer1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbEscudosPlayer1.setText("Escudos");
+        jcbEscudosPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbComprarEscudosActionPerformed(evt);
+                jcbEscudosPlayer1ActionPerformed(evt);
             }
         });
 
-        jcbComprarConsumiveis.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbComprarConsumiveis.setText("Consumiveis");
-        jcbComprarConsumiveis.addActionListener(new java.awt.event.ActionListener() {
+        jcbConsumiveisPlayer1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbConsumiveisPlayer1.setText("Consumiveis");
+        jcbConsumiveisPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbComprarConsumiveisActionPerformed(evt);
+                jcbConsumiveisPlayer1ActionPerformed(evt);
             }
         });
 
-        jcbVenderArmas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbVenderArmas.setText("Armas");
-        jcbVenderArmas.addActionListener(new java.awt.event.ActionListener() {
+        jcbArmasPlayer2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbArmasPlayer2.setText("Armas");
+        jcbArmasPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbVenderArmasActionPerformed(evt);
+                jcbArmasPlayer2ActionPerformed(evt);
             }
         });
 
-        jcbVenderArmaduras.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbVenderArmaduras.setText("Armaduras");
-        jcbVenderArmaduras.addActionListener(new java.awt.event.ActionListener() {
+        jcbArmadurasPlayer2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbArmadurasPlayer2.setText("Armaduras");
+        jcbArmadurasPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbVenderArmadurasActionPerformed(evt);
+                jcbArmadurasPlayer2ActionPerformed(evt);
             }
         });
 
-        jcbVenderEscudos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbVenderEscudos.setText("Escudos");
-        jcbVenderEscudos.addActionListener(new java.awt.event.ActionListener() {
+        jcbEscudosPlayer2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbEscudosPlayer2.setText("Escudos");
+        jcbEscudosPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbVenderEscudosActionPerformed(evt);
+                jcbEscudosPlayer2ActionPerformed(evt);
             }
         });
 
-        jcbVenderConsumiveis.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jcbVenderConsumiveis.setText("Consumiveis");
-        jcbVenderConsumiveis.addActionListener(new java.awt.event.ActionListener() {
+        jcbConsumiveisPlayer2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jcbConsumiveisPlayer2.setText("Consumiveis");
+        jcbConsumiveisPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbVenderConsumiveisActionPerformed(evt);
+                jcbConsumiveisPlayer2ActionPerformed(evt);
             }
         });
 
@@ -200,17 +216,17 @@ public class JFTrocaItens extends javax.swing.JFrame {
         lbVender1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbVender1.setText("Personagem:");
 
-        jCheckBox1.setText("Confirmar");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jConfirmarPlayer2.setText("Confirmar");
+        jConfirmarPlayer2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jConfirmarPlayer2ActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setText("Confirmar");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jConfirmarPlayer1.setText("Confirmar");
+        jConfirmarPlayer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jConfirmarPlayer1ActionPerformed(evt);
             }
         });
 
@@ -241,43 +257,43 @@ public class JFTrocaItens extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jcbComprarArmaduras)
+                        .addComponent(jcbArmadurasPlayer1)
                         .addGap(11, 11, 11)
-                        .addComponent(jcComprarArmaduras, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcArmadurasboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(jcbVenderArmaduras)
+                        .addComponent(jcbArmadurasPlayer2)
                         .addGap(11, 11, 11)
-                        .addComponent(jcVenderArmaduras, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jcArmadurasboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jcbComprarEscudos)
+                        .addComponent(jcbEscudosPlayer1)
                         .addGap(29, 29, 29)
-                        .addComponent(jcComprarEscudos, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcEscudosboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(jcbVenderEscudos)
+                        .addComponent(jcbEscudosPlayer2)
                         .addGap(29, 29, 29)
-                        .addComponent(jcVenderEscudos, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jcEscudosboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jcbComprarConsumiveis)
+                        .addComponent(jcbConsumiveisPlayer1)
                         .addGap(3, 3, 3)
-                        .addComponent(jcComprarConsumiveis, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcConsumiveisboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(jcbVenderConsumiveis)
+                        .addComponent(jcbConsumiveisPlayer2)
                         .addGap(3, 3, 3)
-                        .addComponent(jcVenderConsumiveis, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jcConsumiveisboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jcbComprarArmas)
+                        .addComponent(jcbArmasPlayer1)
                         .addGap(37, 37, 37)
-                        .addComponent(jcComprarArmas, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcArmasboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(jcbVenderArmas)
+                        .addComponent(jcbArmasPlayer2)
                         .addGap(37, 37, 37)
-                        .addComponent(jcVenderArmas, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jcArmasboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(178, 178, 178)
-                .addComponent(jCheckBox2)
+                .addComponent(jConfirmarPlayer1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCheckBox1)
+                .addComponent(jConfirmarPlayer2)
                 .addGap(88, 88, 88))
         );
         layout.setVerticalGroup(
@@ -297,129 +313,258 @@ public class JFTrocaItens extends javax.swing.JFrame {
                         .addComponent(jlListPreçoTotalComprar1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbComprarArmas)
-                    .addComponent(jcComprarArmas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbVenderArmas)
-                    .addComponent(jcVenderArmas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbArmasPlayer1)
+                    .addComponent(jcArmasboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbArmasPlayer2)
+                    .addComponent(jcArmasboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbComprarArmaduras)
-                    .addComponent(jcComprarArmaduras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbVenderArmaduras)
-                    .addComponent(jcVenderArmaduras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbArmadurasPlayer1)
+                    .addComponent(jcArmadurasboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbArmadurasPlayer2)
+                    .addComponent(jcArmadurasboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbComprarEscudos)
-                    .addComponent(jcComprarEscudos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbVenderEscudos)
-                    .addComponent(jcVenderEscudos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbEscudosPlayer1)
+                    .addComponent(jcEscudosboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbEscudosPlayer2)
+                    .addComponent(jcEscudosboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbComprarConsumiveis)
-                    .addComponent(jcComprarConsumiveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbVenderConsumiveis)
-                    .addComponent(jcVenderConsumiveis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcbConsumiveisPlayer1)
+                    .addComponent(jcConsumiveisboxPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbConsumiveisPlayer2)
+                    .addComponent(jcConsumiveisboxPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2))
+                    .addComponent(jConfirmarPlayer2)
+                    .addComponent(jConfirmarPlayer1))
                 .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jcComprarArmasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcComprarArmasItemStateChanged
+    private void jcArmasboxPlayer1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcArmasboxPlayer1ItemStateChanged
 
-    }//GEN-LAST:event_jcComprarArmasItemStateChanged
+    }//GEN-LAST:event_jcArmasboxPlayer1ItemStateChanged
 
-    private void jcComprarArmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcComprarArmasActionPerformed
+    private void jcArmasboxPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcArmasboxPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jcComprarArmasActionPerformed
+    }//GEN-LAST:event_jcArmasboxPlayer1ActionPerformed
 
-    private void jcVenderArmasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcVenderArmasItemStateChanged
+    private void jcArmasboxPlayer2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcArmasboxPlayer2ItemStateChanged
 
-    }//GEN-LAST:event_jcVenderArmasItemStateChanged
+    }//GEN-LAST:event_jcArmasboxPlayer2ItemStateChanged
 
-    private void jcVenderArmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcVenderArmasActionPerformed
+    private void jcArmasboxPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcArmasboxPlayer2ActionPerformed
 
-    }//GEN-LAST:event_jcVenderArmasActionPerformed
+    }//GEN-LAST:event_jcArmasboxPlayer2ActionPerformed
 
-    private void jcComprarArmadurasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcComprarArmadurasItemStateChanged
+    private void jcArmadurasboxPlayer1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcArmadurasboxPlayer1ItemStateChanged
 
-    }//GEN-LAST:event_jcComprarArmadurasItemStateChanged
+    }//GEN-LAST:event_jcArmadurasboxPlayer1ItemStateChanged
 
-    private void jcComprarArmadurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcComprarArmadurasActionPerformed
+    private void jcArmadurasboxPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcArmadurasboxPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jcComprarArmadurasActionPerformed
+    }//GEN-LAST:event_jcArmadurasboxPlayer1ActionPerformed
 
-    private void jcComprarEscudosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcComprarEscudosItemStateChanged
+    private void jcEscudosboxPlayer1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcEscudosboxPlayer1ItemStateChanged
 
-    }//GEN-LAST:event_jcComprarEscudosItemStateChanged
+    }//GEN-LAST:event_jcEscudosboxPlayer1ItemStateChanged
 
-    private void jcComprarEscudosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcComprarEscudosActionPerformed
+    private void jcEscudosboxPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcEscudosboxPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jcComprarEscudosActionPerformed
+    }//GEN-LAST:event_jcEscudosboxPlayer1ActionPerformed
 
-    private void jcComprarConsumiveisItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcComprarConsumiveisItemStateChanged
+    private void jcConsumiveisboxPlayer1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcConsumiveisboxPlayer1ItemStateChanged
 
-    }//GEN-LAST:event_jcComprarConsumiveisItemStateChanged
+    }//GEN-LAST:event_jcConsumiveisboxPlayer1ItemStateChanged
 
-    private void jcComprarConsumiveisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcComprarConsumiveisActionPerformed
+    private void jcConsumiveisboxPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcConsumiveisboxPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jcComprarConsumiveisActionPerformed
+    }//GEN-LAST:event_jcConsumiveisboxPlayer1ActionPerformed
 
-    private void jcVenderArmadurasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcVenderArmadurasItemStateChanged
+    private void jcArmadurasboxPlayer2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcArmadurasboxPlayer2ItemStateChanged
 
-    }//GEN-LAST:event_jcVenderArmadurasItemStateChanged
+    }//GEN-LAST:event_jcArmadurasboxPlayer2ItemStateChanged
 
-    private void jcVenderEscudosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcVenderEscudosItemStateChanged
+    private void jcEscudosboxPlayer2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcEscudosboxPlayer2ItemStateChanged
 
-    }//GEN-LAST:event_jcVenderEscudosItemStateChanged
+    }//GEN-LAST:event_jcEscudosboxPlayer2ItemStateChanged
 
-    private void jcVenderConsumiveisItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcVenderConsumiveisItemStateChanged
+    private void jcConsumiveisboxPlayer2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcConsumiveisboxPlayer2ItemStateChanged
 
-    }//GEN-LAST:event_jcVenderConsumiveisItemStateChanged
+    }//GEN-LAST:event_jcConsumiveisboxPlayer2ItemStateChanged
 
-    private void jcbComprarArmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbComprarArmasActionPerformed
+    private void jcbArmasPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbArmasPlayer1ActionPerformed
+        if (jcbArmasPlayer1.isSelected()) {
+            jConfirmarPlayer1.setVisible(true);
+        } else {
+            jConfirmarPlayer1.setVisible(false);
+        }
+        
+        GenericDAO gDao = null;
+        
+        try {
+            gDao = new GenericDAO();
+        } catch (SQLException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        List<Object> list = null;
 
-    }//GEN-LAST:event_jcbComprarArmasActionPerformed
+        
 
-    private void jcbComprarArmadurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbComprarArmadurasActionPerformed
+        try {
+            list = gDao.listar(PersonagensArmas.class);
+        } catch (SQLException | IllegalAccessException | NoSuchMethodException | IllegalArgumentException | InvocationTargetException | InstantiationException | ClassNotFoundException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-    }//GEN-LAST:event_jcbComprarArmadurasActionPerformed
+       
 
-    private void jcbComprarEscudosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbComprarEscudosActionPerformed
+        for (Object obj2 : list) {
 
-    }//GEN-LAST:event_jcbComprarEscudosActionPerformed
+            PersonagensArmas armaNN = (PersonagensArmas) obj2; ////lista todos os codigos das armas da tabela N/N
+            Armas arma = new Armas();
+            List<Object> ListarArmas = new ArrayList<>();
 
-    private void jcbComprarConsumiveisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbComprarConsumiveisActionPerformed
+            int codigoArma = (armaNN.getCodigo_arma());
+            int codigoPersonagem = (armaNN.getCodigo_personagem());
+            arma.setCodigo_arma(codigoArma);     /////seta o codigo da arma na tabela N/N
+        }
+    }//GEN-LAST:event_jcbArmasPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jcbComprarConsumiveisActionPerformed
+    private void jcbArmadurasPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbArmadurasPlayer1ActionPerformed
+        if (jcbArmadurasPlayer1.isSelected()) {
+            jConfirmarPlayer1.setVisible(true);
+        } else { 
+            jConfirmarPlayer1.setVisible(false);
+        }
+        GenericDAO gDao = null;
+        
+        try {
+            gDao = new GenericDAO();
+        } catch (SQLException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        List<Object> list = null;
 
-    private void jcbVenderArmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbVenderArmasActionPerformed
+        try {
+            list = gDao.listar(PersonagensArmaduras.class);
+        } catch (SQLException | IllegalAccessException | NoSuchMethodException | IllegalArgumentException | InvocationTargetException | InstantiationException | ClassNotFoundException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-    }//GEN-LAST:event_jcbVenderArmasActionPerformed
+        for (Object obj2 : list) {   ////lista todos os codigos das armaduras da tabela N/N
 
-    private void jcbVenderArmadurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbVenderArmadurasActionPerformed
+            PersonagensArmaduras armadurasNN = (PersonagensArmaduras) obj2;
+            Armaduras armadura = new Armaduras();
+            List<Object> ListarArmaduras = new ArrayList<>();
 
-    }//GEN-LAST:event_jcbVenderArmadurasActionPerformed
+            int codigoArmadura = (armadurasNN.getCodigo_armadura());
+            int codigoPersonagem = (armadurasNN.getCodigo_personagem());
+            armadura.setCodigo_armadura(codigoArmadura);  /////seta o codigo da armadura na tabela N/N
+        }    
+    }//GEN-LAST:event_jcbArmadurasPlayer1ActionPerformed
 
-    private void jcbVenderEscudosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbVenderEscudosActionPerformed
+    private void jcbEscudosPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbEscudosPlayer1ActionPerformed
+        if (jcbEscudosPlayer1.isSelected()) {
+            jConfirmarPlayer1.setVisible(true);
+        } else {
+            jConfirmarPlayer1.setVisible(false);
+        }
+         GenericDAO gDao = null;
+        
+        try {
+            gDao = new GenericDAO();
+        } catch (SQLException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        List<Object> list = null;
 
-    }//GEN-LAST:event_jcbVenderEscudosActionPerformed
+        try {
+            list = gDao.listar(PersonagensEscudos.class);
+        } catch (SQLException | IllegalAccessException | NoSuchMethodException | IllegalArgumentException | InvocationTargetException | InstantiationException | ClassNotFoundException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-    private void jcbVenderConsumiveisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbVenderConsumiveisActionPerformed
+        for (Object obj2 : list) {   ////lista todos os codigos dos escudos da tabela N/N
 
-    }//GEN-LAST:event_jcbVenderConsumiveisActionPerformed
+            PersonagensEscudos escudosNN = (PersonagensEscudos) obj2;
+            Escudos escudo = new Escudos();
+            List<Object> ListarEscudos = new ArrayList<>();
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+            int codigoEscudo = (escudosNN.getCodigo_escudo());
+            int codigoPersonagem = (escudosNN.getCodigo_personagem());
+            escudo.setCodigo_escudo(codigoEscudo);  /////seta o codigo do escudo na tabela N/N
+        }
+    }//GEN-LAST:event_jcbEscudosPlayer1ActionPerformed
 
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void jcbConsumiveisPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbConsumiveisPlayer1ActionPerformed
+        if (jcbConsumiveisPlayer1.isSelected()) {
+            jConfirmarPlayer1.setVisible(true);
+        } else {
+            jConfirmarPlayer1.setVisible(false);
+        }
+        GenericDAO gDao = null;
+        
+        try {
+            gDao = new GenericDAO();
+        } catch (SQLException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        List<Object> list = null;
 
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+        try {
+            list = gDao.listar(PersonagensConsumiveis.class);
+        } catch (SQLException | IllegalAccessException | NoSuchMethodException | IllegalArgumentException | InvocationTargetException | InstantiationException | ClassNotFoundException ex) {
+            Logger.getLogger(JFTrocaItens.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        for (Object obj2 : list) {   ////lista todos os codigos dos consumiveis da tabela N/N
+
+            PersonagensConsumiveis consumiveisNN = (PersonagensConsumiveis) obj2;
+            Consumiveis consumivel = new Consumiveis();
+            List<Object> ListarConsumiveis = new ArrayList<>();
+
+            int codigoConsumivel = (consumiveisNN.getCodigo_consumivel());
+            int codigoPersonagem = (consumiveisNN.getCodigo_personagem());
+            consumivel.setCodigo_consumivel(codigoConsumivel);  /////seta o codigo do consumivel na tabela N/N
+        }
+    }//GEN-LAST:event_jcbConsumiveisPlayer1ActionPerformed
+
+    private void jcbArmasPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbArmasPlayer2ActionPerformed
+        jcbArmasPlayer2.setEnabled(false);
+        jcArmasboxPlayer2.setEnabled(false);
+    }//GEN-LAST:event_jcbArmasPlayer2ActionPerformed
+
+    private void jcbArmadurasPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbArmadurasPlayer2ActionPerformed
+        jcbArmadurasPlayer2.setEnabled(false);
+        jcArmadurasboxPlayer2.setEnabled(false);
+    }//GEN-LAST:event_jcbArmadurasPlayer2ActionPerformed
+
+    private void jcbEscudosPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbEscudosPlayer2ActionPerformed
+        jcbEscudosPlayer2.setEnabled(false);
+        jcEscudosboxPlayer2.setEnabled(false);
+    }//GEN-LAST:event_jcbEscudosPlayer2ActionPerformed
+
+    private void jcbConsumiveisPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbConsumiveisPlayer2ActionPerformed
+        jcbConsumiveisPlayer2.setEnabled(false);
+        jcConsumiveisboxPlayer2.setEnabled(false);
+    }//GEN-LAST:event_jcbConsumiveisPlayer2ActionPerformed
+
+    private void jConfirmarPlayer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConfirmarPlayer2ActionPerformed
+        jConfirmarPlayer2.setEnabled(false);
+    }//GEN-LAST:event_jConfirmarPlayer2ActionPerformed
+
+    private void jConfirmarPlayer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jConfirmarPlayer1ActionPerformed
+        jConfirmarPlayer1.setVisible(true);
+    }//GEN-LAST:event_jConfirmarPlayer1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -448,6 +593,8 @@ public class JFTrocaItens extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -458,25 +605,25 @@ public class JFTrocaItens extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jConfirmarPlayer1;
+    private javax.swing.JCheckBox jConfirmarPlayer2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JComboBox jcComprarArmaduras;
-    private javax.swing.JComboBox jcComprarArmas;
-    private javax.swing.JComboBox jcComprarConsumiveis;
-    private javax.swing.JComboBox jcComprarEscudos;
-    private javax.swing.JComboBox jcVenderArmaduras;
-    private javax.swing.JComboBox jcVenderArmas;
-    private javax.swing.JComboBox jcVenderConsumiveis;
-    private javax.swing.JComboBox jcVenderEscudos;
-    private javax.swing.JCheckBox jcbComprarArmaduras;
-    private javax.swing.JCheckBox jcbComprarArmas;
-    private javax.swing.JCheckBox jcbComprarConsumiveis;
-    private javax.swing.JCheckBox jcbComprarEscudos;
-    private javax.swing.JCheckBox jcbVenderArmaduras;
-    private javax.swing.JCheckBox jcbVenderArmas;
-    private javax.swing.JCheckBox jcbVenderConsumiveis;
-    private javax.swing.JCheckBox jcbVenderEscudos;
+    private javax.swing.JComboBox jcArmadurasboxPlayer1;
+    private javax.swing.JComboBox jcArmadurasboxPlayer2;
+    private javax.swing.JComboBox jcArmasboxPlayer1;
+    private javax.swing.JComboBox jcArmasboxPlayer2;
+    private javax.swing.JComboBox jcConsumiveisboxPlayer1;
+    private javax.swing.JComboBox jcConsumiveisboxPlayer2;
+    private javax.swing.JComboBox jcEscudosboxPlayer1;
+    private javax.swing.JComboBox jcEscudosboxPlayer2;
+    private javax.swing.JCheckBox jcbArmadurasPlayer1;
+    private javax.swing.JCheckBox jcbArmadurasPlayer2;
+    private javax.swing.JCheckBox jcbArmasPlayer1;
+    private javax.swing.JCheckBox jcbArmasPlayer2;
+    private javax.swing.JCheckBox jcbConsumiveisPlayer1;
+    private javax.swing.JCheckBox jcbConsumiveisPlayer2;
+    private javax.swing.JCheckBox jcbEscudosPlayer1;
+    private javax.swing.JCheckBox jcbEscudosPlayer2;
     private javax.swing.JLabel jlListPreçoTotalComprar;
     private javax.swing.JLabel jlListPreçoTotalComprar1;
     private javax.swing.JLabel lbVender;

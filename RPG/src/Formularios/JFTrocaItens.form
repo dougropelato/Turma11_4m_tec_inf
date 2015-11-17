@@ -53,49 +53,49 @@
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jcbComprarArmaduras" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbArmadurasPlayer1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                      <Component id="jcComprarArmaduras" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcArmadurasboxPlayer1" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                      <Component id="jcbVenderArmaduras" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbArmadurasPlayer2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                      <Component id="jcVenderArmaduras" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcArmadurasboxPlayer2" min="-2" pref="171" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jcbComprarEscudos" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbEscudosPlayer1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
-                      <Component id="jcComprarEscudos" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcEscudosboxPlayer1" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                      <Component id="jcbVenderEscudos" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbEscudosPlayer2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
-                      <Component id="jcVenderEscudos" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcEscudosboxPlayer2" min="-2" pref="171" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jcbComprarConsumiveis" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbConsumiveisPlayer1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                      <Component id="jcComprarConsumiveis" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcConsumiveisboxPlayer1" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                      <Component id="jcbVenderConsumiveis" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbConsumiveisPlayer2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                      <Component id="jcVenderConsumiveis" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcConsumiveisboxPlayer2" min="-2" pref="171" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jcbComprarArmas" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbArmasPlayer1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="jcComprarArmas" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcArmasboxPlayer1" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                      <Component id="jcbVenderArmas" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcbArmasPlayer2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="37" pref="37" max="-2" attributes="0"/>
-                      <Component id="jcVenderArmas" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="jcArmasboxPlayer2" min="-2" pref="171" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+              <Component id="jConfirmarPlayer1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="jConfirmarPlayer2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -120,36 +120,36 @@
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jcbComprarArmas" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcComprarArmas" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcbVenderArmas" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcVenderArmas" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbArmasPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcArmasboxPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbArmasPlayer2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcArmasboxPlayer2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jcbComprarArmaduras" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcComprarArmaduras" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcbVenderArmaduras" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcVenderArmaduras" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbArmadurasPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcArmadurasboxPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbArmadurasPlayer2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcArmadurasboxPlayer2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jcbComprarEscudos" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcComprarEscudos" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcbVenderEscudos" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcVenderEscudos" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbEscudosPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcEscudosboxPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbEscudosPlayer2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcEscudosboxPlayer2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jcbComprarConsumiveis" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcComprarConsumiveis" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcbVenderConsumiveis" min="-2" max="-2" attributes="0"/>
-                  <Component id="jcVenderConsumiveis" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbConsumiveisPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcConsumiveisboxPlayer1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbConsumiveisPlayer2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcConsumiveisboxPlayer2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jConfirmarPlayer2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jConfirmarPlayer1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
           </Group>
@@ -157,89 +157,89 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JComboBox" name="jcComprarArmas">
+    <Component class="javax.swing.JComboBox" name="jcArmasboxPlayer1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcComprarArmasItemStateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcComprarArmasActionPerformed"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcArmasboxPlayer1ItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcArmasboxPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcVenderArmas">
+    <Component class="javax.swing.JComboBox" name="jcArmasboxPlayer2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcVenderArmasItemStateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcVenderArmasActionPerformed"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcArmasboxPlayer2ItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcArmasboxPlayer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcComprarArmaduras">
+    <Component class="javax.swing.JComboBox" name="jcArmadurasboxPlayer1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcComprarArmadurasItemStateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcComprarArmadurasActionPerformed"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcArmadurasboxPlayer1ItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcArmadurasboxPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcComprarEscudos">
+    <Component class="javax.swing.JComboBox" name="jcEscudosboxPlayer1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcComprarEscudosItemStateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcComprarEscudosActionPerformed"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcEscudosboxPlayer1ItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcEscudosboxPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcComprarConsumiveis">
+    <Component class="javax.swing.JComboBox" name="jcConsumiveisboxPlayer1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcComprarConsumiveisItemStateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcComprarConsumiveisActionPerformed"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcConsumiveisboxPlayer1ItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcConsumiveisboxPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcVenderArmaduras">
+    <Component class="javax.swing.JComboBox" name="jcArmadurasboxPlayer2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcVenderArmadurasItemStateChanged"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcArmadurasboxPlayer2ItemStateChanged"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcVenderEscudos">
+    <Component class="javax.swing.JComboBox" name="jcEscudosboxPlayer2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcVenderEscudosItemStateChanged"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcEscudosboxPlayer2ItemStateChanged"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jcVenderConsumiveis">
+    <Component class="javax.swing.JComboBox" name="jcConsumiveisboxPlayer2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="0"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcVenderConsumiveisItemStateChanged"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jcConsumiveisboxPlayer2ItemStateChanged"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -250,7 +250,7 @@
         <Property name="text" type="java.lang.String" value="Tela de Troca"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbComprarArmas">
+    <Component class="javax.swing.JCheckBox" name="jcbArmasPlayer1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -259,10 +259,10 @@
         <Property name="hideActionText" type="boolean" value="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbComprarArmasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbArmasPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbComprarArmaduras">
+    <Component class="javax.swing.JCheckBox" name="jcbArmadurasPlayer1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -270,10 +270,10 @@
         <Property name="text" type="java.lang.String" value="Armaduras"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbComprarArmadurasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbArmadurasPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbComprarEscudos">
+    <Component class="javax.swing.JCheckBox" name="jcbEscudosPlayer1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -281,10 +281,10 @@
         <Property name="text" type="java.lang.String" value="Escudos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbComprarEscudosActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbEscudosPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbComprarConsumiveis">
+    <Component class="javax.swing.JCheckBox" name="jcbConsumiveisPlayer1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -292,10 +292,10 @@
         <Property name="text" type="java.lang.String" value="Consumiveis"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbComprarConsumiveisActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbConsumiveisPlayer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbVenderArmas">
+    <Component class="javax.swing.JCheckBox" name="jcbArmasPlayer2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -303,10 +303,10 @@
         <Property name="text" type="java.lang.String" value="Armas"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbVenderArmasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbArmasPlayer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbVenderArmaduras">
+    <Component class="javax.swing.JCheckBox" name="jcbArmadurasPlayer2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -314,10 +314,10 @@
         <Property name="text" type="java.lang.String" value="Armaduras"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbVenderArmadurasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbArmadurasPlayer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbVenderEscudos">
+    <Component class="javax.swing.JCheckBox" name="jcbEscudosPlayer2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -325,10 +325,10 @@
         <Property name="text" type="java.lang.String" value="Escudos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbVenderEscudosActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbEscudosPlayer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jcbVenderConsumiveis">
+    <Component class="javax.swing.JCheckBox" name="jcbConsumiveisPlayer2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -336,7 +336,7 @@
         <Property name="text" type="java.lang.String" value="Consumiveis"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbVenderConsumiveisActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbConsumiveisPlayer2ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbVender">
@@ -359,20 +359,20 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jlListPre&#xe7;oTotalComprar1">
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="jConfirmarPlayer2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jConfirmarPlayer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+    <Component class="javax.swing.JCheckBox" name="jConfirmarPlayer1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirmar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jConfirmarPlayer1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
